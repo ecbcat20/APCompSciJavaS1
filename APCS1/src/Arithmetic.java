@@ -52,10 +52,12 @@ public class Arithmetic {
 		System.out.println("3.2 / 6.1 = " + div);
 	}
 
-	// default double value = 0.0
+	// default double value = null
 
 	public static void booleanTest() {
 		boolean variable1, variable2;
+		// default boolean value = null
+		
 		variable1 = true; variable2 = false;
 
 		if(variable1 && variable2 == true || variable1 || variable2 == true) {
@@ -83,17 +85,18 @@ public class Arithmetic {
 
 }
 
-/* Addition: 9
-Subtraction: -1
-
-Multiplication: 15.0
-Division: 0.6
-
-3.2 + 6.1 = 9.3
-3.2 - 6.1 = -2.8999999999999995
-3.2 x 6.1 = 19.52
-3.2 / 6.1 = 0.5245901639344263
-
-true
-false
- */
+		/* 
+		Addition: 9
+		Subtraction: -1
+		
+		Multiplication: 15.0
+		Division: 0.6
+		
+		3.2 + 6.1 = 9.3
+		3.2 - 6.1 = -2.8999999999999995
+		3.2 x 6.1 = 19.52
+		3.2 / 6.1 = 0.5245901639344263
+		
+		true
+		false
+		 */
