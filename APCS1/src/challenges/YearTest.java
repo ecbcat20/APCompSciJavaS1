@@ -71,9 +71,9 @@ public class YearTest {
 
 		//if-then statement for single check
 		if(year.isLeapYear == true) {
-			System.out.println(true);
+			System.out.println(isLeapYear);
 		} else {
-			System.out.println(false);
+			System.out.println(isLeapYear);
 		}
 
 	}
