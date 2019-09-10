@@ -8,6 +8,8 @@
  * Period: 6 AP CS
  *
  */
+
+package challenges;
 public class Arithmetic {
 
 	/**

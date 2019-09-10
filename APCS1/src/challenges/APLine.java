@@ -1,3 +1,4 @@
+package challenges;
 
 public class APLine {
 
