@@ -49,15 +49,17 @@ public class YearTest {
 	static void isLeapYear() {
 		if (isDivisibleFour() == true && !isDivisibleFourH() == true) {
 			System.out.println(true);
-	
+
+		} else {
+			System.out.println(false);
 		}
 
 		if (yearIn <= 1582) {
 			System.out.println("Your year was before 1582. Please input a different year: ");
-	
+
 
 		}
-		
+
 	}
 
 
@@ -65,18 +67,16 @@ public class YearTest {
 	//main method
 	public static void main(String[] args) {
 
+		for(int i = 0; i<=4; i++) {
+			//get user input
+			System.out.println("\n" + "Welcome to the leap year calculator. Please input a year: ");
+			int yearIn = scanner.nextInt();
+			System.out.println("You have entered: " + yearIn);
 
-		//get user input
-		System.out.println("Welcome to the leap year calculator. Please input a year: ");
-		int yearIn = scanner.nextInt();
-		System.out.println("You have entered: " + yearIn);
-
-		//declare year
-		YearTest year = new YearTest(yearIn);
-
-
-		isLeapYear();
-
+			//declare year
+			YearTest year = new YearTest(yearIn);
+			isLeapYear();
+		}
 	}
 }
 
