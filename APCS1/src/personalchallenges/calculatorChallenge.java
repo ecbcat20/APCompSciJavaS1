@@ -9,7 +9,7 @@ public class calculatorChallenge {
 	static char operation;
 	static Scanner scanner = new Scanner(System.in);
 
-	//i just dont want errors :)
+	//i just don't want errors :)
 	@SuppressWarnings("static-access")
 	public calculatorChallenge(double val1, double val2) {
 		this.val1 = val1; this.val2 = val2;
