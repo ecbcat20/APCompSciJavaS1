@@ -6,6 +6,7 @@ public class YearTest {
 
 
 	//class constructor for YearTest, parameter of integer year
+	@SuppressWarnings("static-access")
 	public YearTest(int yearIn) {
 		this.yearIn = yearIn;
 	}
