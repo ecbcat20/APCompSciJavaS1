@@ -23,7 +23,7 @@ public class YearTest {
 	//declare scanner
 	static Scanner scanner = new Scanner(System.in);
 
-	static boolean isDivisibleFour() { //potentially change to if(year % 4 != 0)
+	static boolean isDivisibleFour() { 
 		if(yearIn % 4 == 0) {
 			return true;
 		} else {
@@ -62,8 +62,6 @@ public class YearTest {
 		}
 
 	}
-
-
 
 	//main method
 	public static void main(String[] args) {
