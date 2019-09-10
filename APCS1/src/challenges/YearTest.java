@@ -4,24 +4,26 @@ import java.util.Scanner;
 
 public class YearTest {
 
+
+	//class constructor for YearTest, parameter of integer year
+	public YearTest(int yearIn) {
+		this.yearIn = yearIn;
+	}
+
 	//declare global variables
-	static int year;
 	static int yearIn;
+
+
 	static boolean isDivisibleFour;
-	static boolean isDivisbleHundred;
-	static boolean isDivisbleFourH;
-	boolean isLeapYear;
+	static boolean isDivisibleHundred;
+	static boolean isDivisibleFourH;
+	static boolean isLeapYear;
 
 	//declare scanner
 	static Scanner scanner = new Scanner(System.in);
 
-	//class constructor for YearTest, parameter of integer year
-	public YearTest(int year) {
-
-	}
-
-	boolean isDivisibleFour() { //potentially change to if(year % 4 != 0)
-		if(year % 4 == 0) {
+	static boolean isDivisibleFour() { //potentially change to if(year % 4 != 0)
+		if(yearIn % 4 == 0) {
 			return true;
 		} else {
 			return false;
@@ -29,33 +31,36 @@ public class YearTest {
 	}
 
 	boolean isDivisibleHundred() {
-		if(year % 100 == 0) {
+		if(yearIn % 100 == 0) {
 			return true;
 		} else  {
 			return false;
 		}
 	}
 
-	boolean isDivisibleFourH() {
-		if(year % 400 == 0) {
-			isDivisbleFourH = true;
+	static boolean isDivisibleFourH() {
+		if(yearIn % 400 == 0) {
 			return true;
 		} else  {
 			return false;
-		}
+		} 
 	}
 
-	boolean isLeapYear() {
-		if (isDivisibleFour() == true) {
-			isLeapYear = true;
-			return true;
-		} else if (isDivisibleHundred() == true && isDivisibleFourH() == false) {
-			isLeapYear = false;
-			return false;
-		} else {
-			return isLeapYear;
+	static void isLeapYear() {
+		if (isDivisibleFour() == true && !isDivisibleFourH() == true) {
+			System.out.println(true);
+	
 		}
+
+		if (yearIn <= 1582) {
+			System.out.println("Your year was before 1582. Please input a different year: ");
+	
+
+		}
+		
 	}
+
+
 
 	//main method
 	public static void main(String[] args) {
@@ -69,12 +74,8 @@ public class YearTest {
 		//declare year
 		YearTest year = new YearTest(yearIn);
 
-		//if-then statement for single check
-		if(year.isLeapYear == true) {
-			System.out.println(isLeapYear);
-		} else {
-			System.out.println(isLeapYear);
-		}
+
+		isLeapYear();
 
 	}
 }
