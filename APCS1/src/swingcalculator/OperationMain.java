@@ -11,7 +11,7 @@ public class OperationMain {
 	static String inputVal1;
 	static String inputVal2;
 	static char operation;
-	
+
 	//class constructor 
 	@SuppressWarnings("static-access")
 	public OperationMain(double val1, double val2) {
@@ -34,31 +34,34 @@ public class OperationMain {
 		val2 = Integer.parseInt(inputVal2);
 	}
 
+
+
 	//main operation switch
-	char operation() {
-		//did not define what character was before running switch
-		switch(operation) {
-		case '+' : FrameCreator.plus.addActionListener(new ActionListener() {
+	void operation() {
+		//create actionListener for plus button
+		FrameCreator.plus.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println(val1 + val2);
-			}
+				
+			} 
+
 
 		});
-		break;
-
-		case '-': FrameCreator.minus.addActionListener(new ActionListener() {
+		
+		//create actionListener for minus button
+		FrameCreator.minus.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println(val1 + (-val2));
+				System.out.println(val1 + -val2);
 			}
 
 		});
-		break;
 
-		case '*': FrameCreator.times.addActionListener(new ActionListener() {
+		//create actionListener for multiply button
+		FrameCreator.times.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -67,9 +70,8 @@ public class OperationMain {
 
 		});
 
-		break;
-
-		case '/': FrameCreator.dividedBy.addActionListener(new ActionListener() {
+		//create actionListener for divided by button
+		FrameCreator.dividedBy.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -78,19 +80,22 @@ public class OperationMain {
 
 		});
 
-		} return operation;
-	}
+
+	} 
+
 
 
 
 	public static void main(String[] args) {
 
+		//main method of FrameCreator.java
 		FrameCreator.main(args);
 
+		//instantiate operate as type OperationMain
 		OperationMain operate = new OperationMain(val1, val2);
-		operate.inputVal1();
-		operate.inputVal2();
-		operate.operation();
+		operate.inputVal1(); //get val1
+		operate.inputVal2(); //get val2
+		operate.operation(); //perform given operation
 
 
 	}
