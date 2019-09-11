@@ -62,7 +62,7 @@ public class CollegeSelector {
 
 		CollegeSelector college = new CollegeSelector(size, tier, region);
 
-
+		
 		//master flow
 		do { //do while loop
 			if(college.size() == "small" && college.region() == "west" && college.tier() == "one") {
