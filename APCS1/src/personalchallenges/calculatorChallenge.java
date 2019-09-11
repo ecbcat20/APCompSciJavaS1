@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class calculatorChallenge {
 
-	//static doubles bc need to be accessed by main method
+	//static doubles because need to be accessed by main method
 	static double val1, val2;
 	static char operation;
 	static Scanner scanner = new Scanner(System.in);
