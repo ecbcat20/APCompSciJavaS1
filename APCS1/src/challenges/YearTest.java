@@ -14,7 +14,7 @@ public class YearTest {
 	//declare global variables
 	static int yearIn;
 
-
+	//variables for divisibility
 	static boolean isDivisibleFour;
 	static boolean isDivisibleHundred;
 	static boolean isDivisibleFourH;
@@ -23,6 +23,7 @@ public class YearTest {
 	//declare scanner 
 	static Scanner scanner = new Scanner(System.in);
 
+	//check for divisibility by 4
 	static boolean isDivisibleFour() { 
 		if(yearIn % 4 == 0) {
 			return true;
@@ -30,7 +31,8 @@ public class YearTest {
 			return false;
 		}
 	}
-
+	
+	//check for divisibility by 100
 	boolean isDivisibleHundred() {
 		if(yearIn % 100 == 0) {
 			return true;
@@ -39,6 +41,7 @@ public class YearTest {
 		}
 	}
 
+	//check for divisibility by 400
 	static boolean isDivisibleFourH() {
 		if(yearIn % 400 == 0) {
 			return true;
@@ -47,6 +50,7 @@ public class YearTest {
 		} 
 	}
 
+	//determine if leap year
 	static void isLeapYear() {
 		if (isDivisibleFour() == true && !isDivisibleFourH() == true) {
 			System.out.println(true);
@@ -73,7 +77,7 @@ public class YearTest {
 			System.out.println("You have entered: " + yearIn);
 
 			//declare year
-			@SuppressWarnings("unused")
+			@SuppressWarnings("unused") //no more warnings please
 			YearTest year = new YearTest(yearIn);
 			isLeapYear();
 		}
