@@ -31,7 +31,7 @@ public class YearTest {
 			return false;
 		}
 	}
-	
+
 	//check for divisibility by 100
 	boolean isDivisibleHundred() {
 		if(yearIn % 100 == 0) {
