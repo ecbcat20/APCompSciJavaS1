@@ -73,6 +73,7 @@ public class YearTest {
 			System.out.println("You have entered: " + yearIn);
 
 			//declare year
+			@SuppressWarnings("unused")
 			YearTest year = new YearTest(yearIn);
 			isLeapYear();
 		}
