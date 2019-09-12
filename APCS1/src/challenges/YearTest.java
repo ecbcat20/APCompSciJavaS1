@@ -20,7 +20,7 @@ public class YearTest {
 	static boolean isDivisibleFourH;
 	static boolean isLeapYear;
 
-	//declare scanner
+	//declare scanner 
 	static Scanner scanner = new Scanner(System.in);
 
 	static boolean isDivisibleFour() { 
