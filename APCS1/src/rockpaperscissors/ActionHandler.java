@@ -11,22 +11,24 @@ public class ActionHandler {
 	public static void game() {
 
 		do { 
-			System.out.println("Rock/Paper/Scissors" + " (R/P/S)");
-			GameHandler.userMove = GameHandler.scanner.next();
+			System.out.println("Rock/Paper/Scissors" + " (R/P/S)"); //clarify valid inputs
+			
+			GameHandler.userMove = GameHandler.scanner.next(); //get user input
 
+			//rock
 			if(GameHandler.userMove.equalsIgnoreCase("R") && GameHandler.computerMove[GameHandler.random] == "R") {
 				System.out.println("Tie");
-				WinCounter.ties++;
+				WinCounter.ties++; //increase tie counter
 			}
 
 			if(GameHandler.userMove.equalsIgnoreCase("R") && GameHandler.computerMove[GameHandler.random] == "P") {
 				System.out.println("Loss");
-				WinCounter.losses++;
+				WinCounter.losses++; //increase loss counter
 			}
 
 			if(GameHandler.userMove.equalsIgnoreCase("R") && GameHandler.computerMove[GameHandler.random] == "S") {
 				System.out.println("Win");
-				WinCounter.wins++;
+				WinCounter.wins++; //increase win counter
 			}
 
 			//paper

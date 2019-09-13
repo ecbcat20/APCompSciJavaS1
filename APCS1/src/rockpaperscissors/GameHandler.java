@@ -19,6 +19,7 @@ public class GameHandler {
 
 	public static void main(String[] args) {
 		
+		//run main game class
 		ActionHandler.game();
 		
 
