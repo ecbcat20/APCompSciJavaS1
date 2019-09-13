@@ -19,34 +19,8 @@ public class GameHandler {
 
 	public static void main(String[] args) {
 		
-		System.out.println("R/P/S");
-		userMove = scanner.next();
+		ActionHandler.game();
 		
-		if(userMove.equalsIgnoreCase("R") && computerMove[random] == "R") {
-			System.out.println("Tie");
-		}
-		
-		if(userMove.equalsIgnoreCase("R") && computerMove[random] == "P") {
-			System.out.println("Loss");
-		}
-		
-		if(userMove.equalsIgnoreCase("R") && computerMove[random] == "S") {
-			System.out.println("Win");
-		}
-		
-		//paper
-		if(userMove.equalsIgnoreCase("P") && computerMove[random] == "R") {
-			System.out.println("Win");
-		}
-		
-		if(userMove.equalsIgnoreCase("P") && computerMove[random] == "P") {
-			System.out.println("Tie");
-		}
-		
-		if(userMove.equalsIgnoreCase("P") && computerMove[random] == "S") {
-			System.out.println("Loss");
-		}
-
 
 	}
 

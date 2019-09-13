@@ -4,19 +4,74 @@ import java.util.Scanner;
 
 public class ActionHandler {
 
-Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 
-	public String userMove() {
-		System.out.println("Rock, Paper, or Scissors?");
-		return GameHandler.userMove = scanner.nextLine();
+
+
+	public static void game() {
+
+		do { 
+			System.out.println("Rock/Paper/Scissors" + " (R/P/S)");
+			GameHandler.userMove = GameHandler.scanner.next();
+
+			if(GameHandler.userMove.equalsIgnoreCase("R") && GameHandler.computerMove[GameHandler.random] == "R") {
+				System.out.println("Tie");
+				WinCounter.ties++;
+			}
+
+			if(GameHandler.userMove.equalsIgnoreCase("R") && GameHandler.computerMove[GameHandler.random] == "P") {
+				System.out.println("Loss");
+				WinCounter.losses++;
+			}
+
+			if(GameHandler.userMove.equalsIgnoreCase("R") && GameHandler.computerMove[GameHandler.random] == "S") {
+				System.out.println("Win");
+				WinCounter.wins++;
+			}
+
+			//paper
+			if(GameHandler.userMove.equalsIgnoreCase("P") && GameHandler.computerMove[GameHandler.random] == "R") {
+				System.out.println("Win");
+				WinCounter.wins++;
+			}
+
+			if(GameHandler.userMove.equalsIgnoreCase("P") && GameHandler.computerMove[GameHandler.random] == "P") {
+				System.out.println("Tie");
+				WinCounter.ties++;
+			}
+
+			if(GameHandler.userMove.equalsIgnoreCase("P") && GameHandler.computerMove[GameHandler.random] == "S") {
+				System.out.println("Loss");
+				WinCounter.losses++;
+			}
+
+			//scissors
+			if(GameHandler.userMove.equalsIgnoreCase("S") && GameHandler.computerMove[GameHandler.random] == "S") {
+				System.out.println("Tie");
+				WinCounter.ties++;
+			}
+
+			if(GameHandler.userMove.equalsIgnoreCase("S") && GameHandler.computerMove[GameHandler.random] == "R") {
+				System.out.println("Loss");
+				WinCounter.losses++;
+			}
+
+			if(GameHandler.userMove.equalsIgnoreCase("S") && GameHandler.computerMove[GameHandler.random] == "P") {
+				System.out.println("Win");
+				WinCounter.wins++;
+			}
+
+			if(GameHandler.userMove.equalsIgnoreCase("Exit")) {
+				WinCounter.printResults();
+				System.exit(10);
+			}
+		} while(GameHandler.userMove != "exit");
 	}
-	
 
-	
 	//main method
 	public static void main(String[] args) {
 
-	
+
 
 	}
 
