@@ -12,7 +12,7 @@ public class ActionHandler {
 
 		do { 
 			System.out.println("Rock/Paper/Scissors" + " (R/P/S)"); //clarify valid inputs
-			
+
 			GameHandler.userMove = GameHandler.scanner.next(); //get user input
 
 			//rock

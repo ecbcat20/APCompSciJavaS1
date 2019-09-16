@@ -3,34 +3,26 @@ package forLoopPractice;
 public class FinalTriangleChallenge {
 
 	public static void finalChallenge() {
-		for(int k = 10; k>=1; k--) { //master for loop
-
-			for(int m = 10; m<k; m--) { //loop for determining how many stars to print
+		for (int i=1; i<=10; i++)
+		{
+			// Print space i
+			for (int j=1; j<i; j++) 
+			{ 
+				System.out.print(" "); 
+			} 
+			// Print star 
+			for (int k=10; k>=i; k--)
+			{
 				System.out.print("*");
 			}
-
-			System.out.println("*"); //reset console to new fresh line
-			
-			for (int i=1; i<=k; i++)
-	            {
-	                System.out.print(" ");
-	            } 
+			System.out.println();
 		}
 	}
 
+		public static void main(String[] args) {
+			finalChallenge();
+		}
 
-	public static void main(String[] args) {
-		finalChallenge();
 	}
 
-}
-
-/*
- 
- ***********
-  **********
-    ********
-      ******
-        ****
-          **
-           */
+	
