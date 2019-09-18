@@ -1,9 +1,15 @@
 package looping;
 
+import java.util.Scanner;
+
 public class Ramanujan {
 
-	int one, two, result;
+	static Scanner scanner = new Scanner(System.in);
+	static int one;
+	int two;
+	int result;
 	int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8 , 9, 10};
+	int[] numbersCubed = {1, 8, 27, 64, 125, 
 	
 	//1729 
 	//smallest number expressible as sum of two cubes
@@ -21,9 +27,9 @@ public class Ramanujan {
 	//would need methods to determine how to break up number
 	//break up number by cubes
 	
-	int math() {
+	int math(int one) {
 		for(int i = 1; i <= 3; i++) {
-			if(one % numbers[2]) {
+			if(one % numbers[2] == 0) {
 				
 			}
 			for(int j = 1; j<=4; j++) {
@@ -41,6 +47,8 @@ public class Ramanujan {
 	
 	public static void main(String[] args) {
 
+		System.out.println("Enter your number!: ");
+		one = scanner.nextInt();
 		
 		
 	}
