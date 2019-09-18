@@ -12,30 +12,19 @@ public class StarPatterns {
 
 
 		for (int i=1; i<=number; i++) {
-			for (int j=1; j<i; j++) { 
-				
-				System.out.print("*");
-				
-				for(int l = number; l<=number; l--) {
-					System.out.print("");
-				}
-				
-			} 
-			
-			for (int k=number; k>=i; k--)
-			{
-				System.out.print("*");
+			System.out.print("*");
+			for(int space = 0; space<=number; space++) {
+
+				System.out.print(".");
+
 			}
-			
-			System.out.println("");
+			System.out.print("*");
+			System.out.println();
 
 
+			scanner.close();
 
 		}
-		
-		
-		scanner.close();
-		
-	}
 
+	}
 }
