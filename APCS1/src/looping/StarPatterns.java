@@ -16,45 +16,37 @@ public class StarPatterns {
 		 * after i spaces is printed, print one *
 		 */
 
-		for(int i = 0; i<=number; i++) { //master for loop, open
+		for (int i = 1; i <= number; i++) {
 
-			for(int j = i; j>0; j--) { //i = j, j is greater than 0, decrement j
-				System.out.print(" "); //will print spaces
+			for (int j = 1; j < i; j++) { //prints space before each row
+				System.out.print(" ");
+			}
 
-				/*for(int x = number; x>0; x--) {
-					System.out.print("*");
-				}
-				
-				System.out.println(" ");
-				*/
-				
-				
-				/*while(j > 0) {
-					System.out.print(" ");
-				}
+			for (int j = i; j <= number; j++) { 
+				System.out.print("+" + " "); //prints symbol and then space
+			} 
 
-				 */
-
-
-			} //close second for loop
-
-			System.out.println(i); //print star
-
-		} //close first for loop
+			System.out.println(); 
+		} 
 
 		//----------------------------------------------------------------------------------
 
-		for(int m = (number - 1); m>=0; m--) { //open new for loop that runs same amount of times
+		for (int i = number-1; i >= 1; i--) {
+			//Printing i spaces at the beginning of each row
 
-			for(int n = m; n>0; n--) {
+			for (int j = 1; j < i; j++) {
 				System.out.print(" ");
-				for(int o = n; o<0; o++) {
-					System.out.print("?");
-				}
 			}
-			System.out.println("*");
+
+			//Printing i to rows value at the end of each row
+
+			for (int j = i; j <= number; j++) {
+				System.out.print("+" + " ");
+			}
+
+			System.out.println();
 		}
-		System.out.println();
+
 
 		scanner.close();
 
