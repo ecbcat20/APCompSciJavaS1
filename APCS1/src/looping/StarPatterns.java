@@ -11,13 +11,14 @@ public class StarPatterns {
 		int number = scanner.nextInt();
 
 
-		for (int i=1; i<=number; i++) {
-			System.out.print("*");
-			for(int space = 0; space<=number; space++) {
+		for (int i=0; i<=number; i++) {
+			for(int j = number; j<=0; j--) { //print spaces
 
-				System.out.print(".");
+				System.out.print("*");
+			
 
 			}
+			
 			System.out.print("*");
 			System.out.println();
 
