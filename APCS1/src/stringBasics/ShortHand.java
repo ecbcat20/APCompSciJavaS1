@@ -62,6 +62,8 @@ public class ShortHand {
 			s3 = s3.toLowerCase();
 			s4 = s4.toLowerCase();
 			s5 = s5.toLowerCase();
+			
+			selection.toLowerCase(); //can exit with q or Q
 
 			ShortHand string1 = new ShortHand(s1); //create objects
 			ShortHand string2 = new ShortHand(s2);
