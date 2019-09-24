@@ -31,7 +31,7 @@ public class MultipleMath {
 	//Pythagorean theorem calculator for c
 	public static void pythagoras(int a, int b) {
 		double pythagoras = (Math.sqrt((a*a) + (b*b)));
-		System.out.println(pythagoras);
+		System.out.println(pythagoras); //return to main
 	}
 
 	//main method
