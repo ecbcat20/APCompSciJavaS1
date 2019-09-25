@@ -1,3 +1,4 @@
+package boyerMoore;
 public class BoyerMoore {
     private final int radix = 256; //number of characters accounted for in the bad char array
     private int[] right; //bad character array
