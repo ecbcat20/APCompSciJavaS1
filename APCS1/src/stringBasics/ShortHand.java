@@ -11,7 +11,7 @@ public class ShortHand {
 	//all strings
 	static String s1 = "You can pretend to be serious; you can't pretend to be witty";
 	static String s2 = "for FOR to you YOU and TO and";
-	static String s3 = "Humuhumunukunukuapua'a";
+	static String s3 = "Humuhumunukunukuapua'a - Hawaiian State Fish";
 	static String s4 = "2+2=4";
 	static String s5 = "This is FOR YOU TO try AND convert";
 
@@ -22,8 +22,14 @@ public class ShortHand {
 	static int i = 1; //ticker for do-while loop
 
 	void string1() { //string1
-		s1.replace("and", "&");
+		s1 = s1.replace("and", "&");
 		s1 = s1.replace("you", "u");
+		s1 = s1.replace("to", "2");
+		
+		s1 = s1.replace("a", "");
+		s1 = s1.replace("e", "");
+		s1 = s1.replace("i", "");
+		s1 = s1.replace("o", "");		
 		System.out.println(s1);	
 	}
 
@@ -32,21 +38,43 @@ public class ShortHand {
 		s2 = s2.replace("to", "2");
 		s2 = s2.replace("you", "u");
 		s2 = s2.replace("and", "&");
+		
+		s2 = s2.replace("a", "");
+		s2 = s2.replace("e", "");
+		s2 = s2.replace("i", "");
+		s2 = s2.replace("o", "");		
 		System.out.println(s2);
 	}
 
 	void string3() { //string3
-		System.out.println("String 3 is okay"); //nothing to do for string3
+		s3 = s3.replace("a", "");
+		s3 = s3.replace("e", "");
+		s3 = s3.replace("i", "");
+		s3 = s3.replace("o", "");
+		s3 = s3.replace("u", "");
+		System.out.println(s3);
 	}
 
 	void string4() { //string4
-		System.out.println("String 4 is also okay"); //nothing to do for string4 either
+		s4 = s4.replace("a", "");
+		s4 = s4.replace("e", "");
+		s4 = s4.replace("i", "");
+		s4 = s4.replace("o", "");
+		s4 = s4.replace("u", "");
+		System.out.println(s4);
 	}
 
 	void string5() { //string5
 		s5 = s5.replace("for", "4");
+		s5 = s5.replace("you", "u");
 		s5 = s5.replace("to", "2");
 		s5 = s5.replace("and", "&");
+		
+		s5 = s5.replace("a", "");
+		s5 = s5.replace("e", "");
+		s5 = s5.replace("i", "");
+		s5 = s5.replace("o", "");
+		s5 = s5.replace("u", "");
 		System.out.println(s5);
 	}
 
@@ -89,6 +117,9 @@ public class ShortHand {
 			break;
 
 			case "q": System.exit(10); //exit
+			break;
+			
+			case "Q": System.exit(10); //exit
 			break;
 
 			} 
