@@ -23,7 +23,7 @@ public class BoyerMoore {
     }
  
     /**
-     * Returns the index of the first occurrrence of the pattern string
+     * Returns the index of the first occurrence of the pattern string
      * in the text string.
      *
      * @param  text is the field in which we are looking for a match to the target string
