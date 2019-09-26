@@ -1,4 +1,4 @@
-package stringBasics;
+package shorthand;
 
 import java.util.Scanner; //import scanner
 
