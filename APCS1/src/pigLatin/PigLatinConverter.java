@@ -2,22 +2,26 @@ package pigLatin;
 
 public class PigLatinConverter {
 
-	static String input, finalPigLatin;
+	static String input, finalPigLatin; //initialize String variables, add static modifiers to match. 
 
-	@SuppressWarnings("static-access")
+	@SuppressWarnings("static-access") //no more static access warnings. 
 	public PigLatinConverter(String input) {
 		this.input = input;
 	}
 
+	//determine if is vowel. 
 	static boolean isVowel(char c) { 
 		return (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || 
 				c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
 	} //list of values
 
+
+	//main conversion method. 
 	static String pigLatin(String input) {
 		int length = input.length(); //set length of String
 		int index = -1; //set index of first vowel to -1
 
+		//go through the String and search for vowels. Set first vowel index to i once a vowel is found. 
 		for(int i = 0; i < length; i++) {
 			if(isVowel(input.charAt(i))) { //check for vowels at index i 
 				index = i; //once vowels are found, set vowel index at i
@@ -28,13 +32,9 @@ public class PigLatinConverter {
 		if(index == -1) //if vowels are at beginning of string, set to -1
 			return "-1";
 
-		//need to find the character at location 0 after conversion and change case;
-
-		input.substring(0).toUpperCase();
-
-
 
 		//take what you got and capitalize the first letter
+		//only run if the thing you put in features a capital letter at the beginning. 
 		if(input.indexOf("A") == 0 || input.indexOf("A") == 0 ||input.indexOf("A") == 0 
 				|| input.indexOf("A") == 0 ||input.indexOf("B") == 0 ||
 				input.indexOf("C") == 0 ||input.indexOf("D") == 0 ||input.indexOf("E") == 0 ||
@@ -50,29 +50,28 @@ public class PigLatinConverter {
 					+ input.substring(0, index) + "ay"; //return final result
 
 			finalPigLatin = finalPigLatin.substring(0,1).toUpperCase() + 
-					finalPigLatin.substring(1).toLowerCase();
+					finalPigLatin.substring(1).toLowerCase(); //make string
 
-			return finalPigLatin;
+			return finalPigLatin; //return string if capital letter
 
 
+			//run if the input is a q and u case. Otherwise run the other methods.
 		} else if(input.indexOf("q") == 0 && input.indexOf("u") == 1 || 
 				input.indexOf("y") == 0) {
 			finalPigLatin = input.substring(index)
 					+ input.substring(0, index) + "ay"; //return final result
 
 
-			return finalPigLatin;
-			
+			return finalPigLatin; //return string if qu word.
+
 		} else {
-			
+
 			finalPigLatin = input.substring(index)
-					+ input.substring(0, index) + "ay"; //return final result
+					+ input.substring(0, index) + "ay"; //return string if normal word. 
 		}
 
-		//at this point finalPigLatin is properly capitalized.
-
+		return finalPigLatin; //return string if normal word. 
 		
-		return finalPigLatin;
 	}
 }
 
