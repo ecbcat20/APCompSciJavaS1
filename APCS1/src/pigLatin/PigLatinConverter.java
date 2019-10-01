@@ -66,6 +66,8 @@ public class PigLatinConverter {
 			return finalPigLatin; //return string if capital letter
 
 
+		//----------------------------------------------------------------------------
+			
 			//run if the input is a q and u case. Otherwise run the other methods.
 		} else if(input.contains("q") && input.indexOf("u") == input.indexOf("q")+1) {
 
@@ -75,31 +77,41 @@ public class PigLatinConverter {
 
 			return finalPigLatin; //return string if qu word.
 
+		//if index of y is 0 (if y is start of String
 		} else if(input.indexOf("y") == 0) {
 			
 			finalPigLatin = input.substring(index+1)
 					+ input.substring(0, index) + "yay"; //return string if normal word. 
 
+		//if vowel is start of String
 		} else if(index == 0) {
 			finalPigLatin = input.substring(index)
-					+ input.substring(0, index) + "way"; 
-			
-		} else if(input.contains("?")) {
-			finalPigLatin = input.substring(index)
-					+ input.substring(0, index) + input.substring(input.length()) + "ay" + "?"; 
-			
+					+ input.substring(0, index) + "way"; //if vowel is first
 		
-
+		//if contains question, exclamation, or comma
+		} else if(input.contains("?") || input.contains("!") ||
+				input.contains(",")) { //contains punctuation
+			
+			finalPigLatin = input.substring(index, input.length()-1) + 
+					input.substring(0, index)+ "ay" + "?"; 
+			
+		//if contains quotation marks
+		} else if(input.contains("\"")) { //contains quotes
+			finalPigLatin = "\""+ input.substring(index, input.length()-1) + 
+					input.substring(1, index)+ "ay" + "\""; 
+		
+		//normal String, nothing else added
 		} else {
 
 			finalPigLatin = input.substring(index)
 					+ input.substring(0, index) + "ay"; //return string if normal word. 
 		}
 
-		return finalPigLatin; //return string if normal word. 
-
+		//return String
+		return finalPigLatin;
+		
 	}
 
 
 
-} //stuck on punctuation, and quotations
+} //got punctuation / quotes, need to find out if better way to write this code. 
