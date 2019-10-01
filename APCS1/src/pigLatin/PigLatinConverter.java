@@ -11,15 +11,22 @@ public class PigLatinConverter {
 
 	//determine if is vowel. 
 	static boolean isVowel(char c) { 
-		return (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || 
-				c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+		return (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c =='y' || 
+				c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') || c =='Y';
 	} //list of values
+	
+	static boolean characters(char e) {
+		return (e == '!' || e == '?' || e == '.') || e == ',';
+	} //list of vowels
+	
+	static char[] characters = {'!', '.', '.', '?'};
 
 
 	//main conversion method. 
 	static String pigLatin(String input) {
 		int length = input.length(); //set length of String
 		int index = -1; //set index of first vowel to -1
+
 
 		//go through the String and search for vowels. Set first vowel index to i once a vowel is found. 
 		for(int i = 0; i < length; i++) {
@@ -28,6 +35,10 @@ public class PigLatinConverter {
 				break;
 			}
 		}
+		
+
+		if(index == -1) //if vowels are at beginning of string, set to -1
+			return "-1";
 
 		if(index == -1) //if vowels are at beginning of string, set to -1
 			return "-1";
@@ -56,13 +67,28 @@ public class PigLatinConverter {
 
 
 			//run if the input is a q and u case. Otherwise run the other methods.
-		} else if(input.indexOf("q") == 0 && input.indexOf("u") == 1 || 
-				input.indexOf("y") == 0) {
-			finalPigLatin = input.substring(index)
-					+ input.substring(0, index) + "ay"; //return final result
+		} else if(input.contains("q") && input.indexOf("u") == input.indexOf("q")+1) {
+
+			finalPigLatin = input.substring(index+1)
+					+ input.substring(0, index) + "uay"; //return final result
 
 
 			return finalPigLatin; //return string if qu word.
+
+		} else if(input.indexOf("y") == 0) {
+			
+			finalPigLatin = input.substring(index+1)
+					+ input.substring(0, index) + "yay"; //return string if normal word. 
+
+		} else if(index == 0) {
+			finalPigLatin = input.substring(index)
+					+ input.substring(0, index) + "way"; 
+			
+		} else if(input.contains("?")) {
+			finalPigLatin = input.substring(index)
+					+ input.substring(0, index) + input.substring(input.length()) + "ay" + "?"; 
+			
+		
 
 		} else {
 
@@ -71,6 +97,9 @@ public class PigLatinConverter {
 		}
 
 		return finalPigLatin; //return string if normal word. 
-		
+
 	}
-}
+
+
+
+} //stuck on punctuation, and quotations
