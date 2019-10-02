@@ -14,11 +14,11 @@ public class PigLatinConverter {
 		return (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c =='y' || 
 				c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') || c =='Y';
 	} //list of values
-	
+
 	static boolean characters(char e) {
 		return (e == '!' || e == '?' || e == '.') || e == ',';
 	} //list of vowels
-	
+
 	static char[] characters = {'!', '.', '.', '?'};
 
 
@@ -35,7 +35,7 @@ public class PigLatinConverter {
 				break;
 			}
 		}
-		
+
 
 		if(index == -1) //if vowels are at beginning of string, set to -1
 			return "-1";
@@ -66,8 +66,8 @@ public class PigLatinConverter {
 			return finalPigLatin; //return string if capital letter
 
 
-		//----------------------------------------------------------------------------
-			
+			//----------------------------------------------------------------------------
+
 			//run if the input is a q and u case. Otherwise run the other methods.
 		} else if(input.contains("q") && input.indexOf("u") == input.indexOf("q")+1) {
 
@@ -77,39 +77,59 @@ public class PigLatinConverter {
 
 			return finalPigLatin; //return string if qu word.
 
-		//if index of y is 0 (if y is start of String
+			//if index of y is 0 (if y is start of String
 		} else if(input.indexOf("y") == 0) {
-			
+
 			finalPigLatin = input.substring(index+1)
 					+ input.substring(0, index) + "yay"; //return string if normal word. 
 
-		//if vowel is start of String
+			//if vowel is start of String
 		} else if(index == 0) {
 			finalPigLatin = input.substring(index)
 					+ input.substring(0, index) + "way"; //if vowel is first
-		
-		//if contains question, exclamation, or comma
-		} else if(input.contains("?") || input.contains("!") ||
-				input.contains(",")) { //contains punctuation
-			
-			finalPigLatin = input.substring(index, input.length()-1) + 
-					input.substring(0, index)+ "ay" + "?"; 
-			
-		//if contains quotation marks
-		} else if(input.contains("\"")) { //contains quotes
-			finalPigLatin = "\""+ input.substring(index, input.length()-1) + 
-					input.substring(1, index)+ "ay" + "\""; 
-		
-		//normal String, nothing else added
-		} else {
 
+			//if contains question, exclamation, or comma
+		} else if((input.contains("?") && !input.contains("\"")) || input.contains("!")) {
+
+			if(input.contains("!")) {
+				finalPigLatin = input.substring(index, input.length()-1) + 
+						input.substring(0, index)+ "ay" + "!"; 
+
+			} else if(input.contains("?")) {
+				finalPigLatin = input.substring(index, input.length()-1) + 
+						input.substring(0, index)+ "ay" + "?"; 
+			} else {
+				finalPigLatin = input.substring(index, input.length()-1) + 
+						input.substring(0, index)+ "ay"; 
+			}
+
+			//if contains quotation marks
+		} else if(input.contains("\"")) { //contains quotes
+
+			if(input.contains("\"") && (input.indexOf("?") == input.charAt(input.length()-1))) {
+				finalPigLatin = "\""+ input.substring(index, input.length()-1) + 
+						input.substring(1, index)+ "ay" + "\""; 
+			}
+
+			else if(input.contains("\"") && input.contains("?")) {
+				System.out.println("hello world");
+
+				finalPigLatin = "\""+ input.substring(index, input.length()-2) + 
+						input.substring(1, index)+ "ay" + "?" + "\""; 
+
+			} else {
+				finalPigLatin = "\""+ input.substring(index, input.length()-1) + 
+						input.substring(1, index)+ "ay" + "\""; 
+			}
+
+		} else {
 			finalPigLatin = input.substring(index)
 					+ input.substring(0, index) + "ay"; //return string if normal word. 
 		}
 
 		//return String
 		return finalPigLatin;
-		
+
 	}
 
 
