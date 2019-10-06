@@ -121,6 +121,7 @@ public class PigLatinConverter {
 				finalPigLatin = "\""+ input.substring(index, input.length()-1) + 
 						input.substring(1, index)+ "ay" + "\""; 
 			}
+			
 
 		} else {
 			finalPigLatin = input.substring(index)
