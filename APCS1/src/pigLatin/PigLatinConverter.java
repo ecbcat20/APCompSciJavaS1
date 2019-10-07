@@ -68,6 +68,7 @@ public class PigLatinConverter {
 
 			//----------------------------------------------------------------------------
 
+
 			//run if the input is a q and u case. Otherwise run the other methods.
 		} else if(input.contains("q") && input.indexOf("u") == input.indexOf("q")+1) {
 
