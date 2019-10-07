@@ -18,6 +18,7 @@ public class PigLatinMain {
 			System.out.println("Enter string to convert to Pig Latin: ");
 			input = scanner.next();
 			
+			@SuppressWarnings("unused")
 			PigLatinConverter pig = new PigLatinConverter(input);
 			String s = PigLatinConverter.pigLatin(input);
 			System.out.println(s);
