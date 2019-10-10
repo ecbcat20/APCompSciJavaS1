@@ -10,8 +10,6 @@ public class StarPatterns {
 		Scanner scanner = new Scanner(System.in);
 		int number = scanner.nextInt();		
 
-		//may have to implement a while loop to finish
-
 		/* on first line while x is equal to i, print i spaces
 		 * after i spaces is printed, print one *
 		 */
