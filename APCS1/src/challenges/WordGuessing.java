@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class WordGuessing {
 
 	String hiddenWord = "HARPS";
-	static String returned = "";
 	static String guess;
 
 	public WordGuessing(String hiddenWord) {
@@ -13,23 +12,25 @@ public class WordGuessing {
 	}
 
 	String guess(String guess) {
+		String returned = "";
 
-		for(int i = 0; i<hiddenWord.length(); i++) {
-			
-			if(guess == hiddenWord) {
-				returned = hiddenWord;
-			} if(guess.charAt(i) == hiddenWord.charAt(i)) {
-				returned += returned.charAt(i);
-			} else if(guess.charAt(i)!=hiddenWord.charAt(i)){
-				returned += "+";
+		for(int i = 0; i<guess.length(); i++) {
+			if(guess.charAt(i) == hiddenWord.charAt(i)) {
+				returned = returned + hiddenWord.substring(i, i+1);
+				System.out.println(returned);
+
+			} else {
+				returned = returned + "*";
+				System.out.println(returned);
 			}
+
+
 		}
 
 		return returned;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("input your guess");
@@ -37,7 +38,7 @@ public class WordGuessing {
 
 		WordGuessing guessed = new WordGuessing(guess);
 		guessed.guess(guess);
-		System.out.println(returned);
+		System.out.println();
 
 		scanner.close();
 
