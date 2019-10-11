@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class WordGuessing {
 
-	String hiddenWord = "HARPS";
+	static String hiddenWord = "HARPS";
 	static String guess;
 
+	@SuppressWarnings("static-access")
 	public WordGuessing(String hiddenWord) {
 		this.hiddenWord = hiddenWord;
 	}
@@ -36,7 +37,7 @@ public class WordGuessing {
 		System.out.println("input your guess");
 		guess = scanner.next();
 
-		WordGuessing guessed = new WordGuessing(guess);
+		WordGuessing guessed = new WordGuessing(hiddenWord);
 		guessed.guess(guess);
 		System.out.println();
 
