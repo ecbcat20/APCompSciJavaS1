@@ -10,6 +10,7 @@
  */
 
 package challenges;
+
 public class Arithmetic {
 
 	/**
@@ -18,10 +19,11 @@ public class Arithmetic {
 
 	public static void addAndSubtract() {
 		int num1, num2;
-		num1 = 4; num2 = 5;
+		num1 = 4;
+		num2 = 5;
 
-		int answerAdd = num1+num2;
-		int answerSubtract = num1-num2;
+		int answerAdd = num1 + num2;
+		int answerSubtract = num1 - num2;
 
 		System.out.println("Addition: " + answerAdd);
 		System.out.println("Subtraction: " + answerSubtract);
@@ -30,10 +32,11 @@ public class Arithmetic {
 
 	public static void multiplyAndDivide() {
 		double number1, number2;
-		number1 = 3; number2 = 5;
+		number1 = 3;
+		number2 = 5;
 
-		double answerMult = number1*number2;
-		double answerDiv = number1/number2;
+		double answerMult = number1 * number2;
+		double answerDiv = number1 / number2;
 
 		System.out.println("\n" + "Multiplication: " + answerMult);
 		System.out.println("Division: " + answerDiv);
@@ -41,12 +44,13 @@ public class Arithmetic {
 
 	public static void doubleArithmetic() {
 		double numero1, numero2;
-		numero1 = 3.2; numero2 = 6.1;
+		numero1 = 3.2;
+		numero2 = 6.1;
 
-		double add = numero1+numero2;
-		double sub = numero1-numero2;
-		double mult = numero1*numero2;
-		double div = numero1/numero2;
+		double add = numero1 + numero2;
+		double sub = numero1 - numero2;
+		double mult = numero1 * numero2;
+		double div = numero1 / numero2;
 
 		System.out.println("\n" + "3.2 + 6.1 = " + add);
 		System.out.println("3.2 - 6.1 = " + sub);
@@ -59,14 +63,15 @@ public class Arithmetic {
 	public static void booleanTest() {
 		boolean variable1, variable2;
 		// default boolean value = null
-		
-		variable1 = true; variable2 = false;
 
-		if(variable1 && variable2 == true || variable1 || variable2 == true) {
+		variable1 = true;
+		variable2 = false;
+
+		if (variable1 && variable2 == true || variable1 || variable2 == true) {
 			System.out.println("\n" + "true");
-		} 
+		}
 
-		if(variable1 != variable2) {
+		if (variable1 != variable2) {
 			System.out.println("false");
 
 		} else {
@@ -82,23 +87,17 @@ public class Arithmetic {
 		doubleArithmetic();
 		booleanTest();
 
-
 	}
 
 }
 
-		/* 
-		Addition: 9
-		Subtraction: -1
-		
-		Multiplication: 15.0
-		Division: 0.6
-		
-		3.2 + 6.1 = 9.3
-		3.2 - 6.1 = -2.8999999999999995
-		3.2 x 6.1 = 19.52
-		3.2 / 6.1 = 0.5245901639344263
-		
-		true
-		false
-		 */
+/*
+ * Addition: 9 Subtraction: -1
+ * 
+ * Multiplication: 15.0 Division: 0.6
+ * 
+ * 3.2 + 6.1 = 9.3 3.2 - 6.1 = -2.8999999999999995 3.2 x 6.1 = 19.52 3.2 / 6.1 =
+ * 0.5245901639344263
+ * 
+ * true false
+ */

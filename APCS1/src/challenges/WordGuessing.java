@@ -15,16 +15,15 @@ public class WordGuessing {
 	String guess(String guess) {
 		String returned = "";
 
-		for(int i = 0; i<guess.length(); i++) {
-			if(guess.charAt(i) == hiddenWord.charAt(i)) {
-				returned = returned + hiddenWord.substring(i, i+1);
+		for (int i = 0; i < guess.length(); i++) {
+			if (guess.charAt(i) == hiddenWord.charAt(i)) {
+				returned = returned + hiddenWord.substring(i, i + 1);
 				System.out.println(returned);
 
 			} else {
 				returned = returned + "*";
 				System.out.println(returned);
 			}
-
 
 		}
 
@@ -42,8 +41,6 @@ public class WordGuessing {
 		System.out.println();
 
 		scanner.close();
-
-
 
 	}
 
