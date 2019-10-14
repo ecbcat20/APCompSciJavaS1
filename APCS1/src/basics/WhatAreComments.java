@@ -1,17 +1,22 @@
 package basics;
 
+import java.io.FileWriter;
+
 public class WhatAreComments {
+
+	String path = "~/Users/ecbca/Desktop/file.txt";
 
 	public static void main(String[] args) {
 
-		int num = 5;
-		int num2 = 0;
+		int[] arr = new int[20];
+		int number = 13;
 
-		try {
-			System.out.println(num/num2);
-		} catch (Exception e) {
-			System.out.println("error");
+		for (int i = 0; i < number; i++) {
+			arr[i] = i;
+			System.out.println("Number: " + i + "  ,  " + "Array at: " + arr[i]);
+
 		}
+
 	}
 
 }
