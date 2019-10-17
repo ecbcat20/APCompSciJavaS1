@@ -12,7 +12,8 @@ public class BankAccount {
 	}
 
 	public BankAccount(double balance, String name) {
-
+		this.balance = balance;
+		this.name = name;
 	}
 
 	public void deposit(double amount) {
