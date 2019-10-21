@@ -5,14 +5,15 @@ import java.util.Scanner;
 
 public class BankAccountBanker {
 
-	public static BankAccount[] read(String fileName) {
+	public static BankAccount[] read(String fileName) { 
+		//accepts parameter String fileName (remember to escape characters)
 
 		BankAccount[] accounts = new BankAccount[20];
 		System.out.println("Reading File from Java code");
 
 		try {
 
-			File file = new File(fileName);
+			File file = new File(fileName); //instantiate file as new file with filename
 			Scanner in = new Scanner(file);
 
 			// Variable to hold the one line data
