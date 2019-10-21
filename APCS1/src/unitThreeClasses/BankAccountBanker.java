@@ -26,11 +26,13 @@ public class BankAccountBanker {
 				System.out.println(name + "     " + bal);
 				accounts[i] = new BankAccount(name, bal);
 			}
+
 			// Close the buffer reader
 			in.close();
 
 		} catch (Exception e) {
 			System.out.println("Error while reading file line by line:" + e.getMessage());
+
 		}
 
 		return accounts;

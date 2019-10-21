@@ -2,7 +2,8 @@ package unitThreeClasses;
 
 public class Banker {
 
-	private String name, read;
+	public String name;
+	private String read;
 
 	public Banker(String name) {
 		this.name = name;

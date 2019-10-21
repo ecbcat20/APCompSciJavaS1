@@ -4,7 +4,6 @@ public class BankAccount {
 
 	private double balance;
 	private String name;
-	private String bName;
 
 	// default constructor
 	public BankAccount() {
@@ -16,10 +15,6 @@ public class BankAccount {
 	public BankAccount(String name, double balance) {
 		this.balance = balance;
 		this.name = name;
-	}
-	
-	public BankAccount(String bName) {
-		this.bName = bName;
 	}
 
 	// deposit
