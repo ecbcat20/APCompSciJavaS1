@@ -14,6 +14,12 @@ public class BankDay {
 		return date;
 	}
 	
+	public BankAccountBanker search(String name) {
+		
+		return account;
+	}
+	
+	
 	
 	
 	
