@@ -4,6 +4,7 @@ public class BankAccount {
 
 	private double balance;
 	private String name;
+	private String bName;
 
 	// default constructor
 	public BankAccount() {
@@ -12,9 +13,13 @@ public class BankAccount {
 	}
 
 	// secondary constructor
-	public BankAccount(double balance, String name) {
+	public BankAccount(String name, double balance) {
 		this.balance = balance;
 		this.name = name;
+	}
+	
+	public BankAccount(String bName) {
+		this.bName = bName;
 	}
 
 	// deposit
@@ -32,6 +37,14 @@ public class BankAccount {
 
 		String everything = "Hello, " + name + " Your balance is: " + balance + ".";
 		return everything;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public String getName() {
+		return name;
 	}
 
 }
