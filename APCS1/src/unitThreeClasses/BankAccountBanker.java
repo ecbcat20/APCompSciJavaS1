@@ -24,6 +24,7 @@ public class BankAccountBanker {
 			for (int i = 0; i < 20; i++) {
 				String name = in.next();
 				int bal = in.nextInt();
+				line = (name + "          " + bal);
 				System.out.println(name + "     " + bal);
 				accounts[i] = new BankAccount(name, bal);
 			}
