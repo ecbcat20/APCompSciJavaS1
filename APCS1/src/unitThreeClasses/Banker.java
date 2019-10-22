@@ -10,7 +10,7 @@ public class Banker {
 	public Banker(String name) {
 		this.name = name;
 	}
-	
+
 	static String line;
 
 	public static BankAccount[] read(String fileName) {
@@ -32,7 +32,7 @@ public class Banker {
 			for (int i = 0; i < 20; i++) {
 				String name = in.next();
 				int bal = in.nextInt();
-				line = name;
+				line = name + "      " + bal;
 				System.out.println(name + "     " + bal);
 				accounts[i] = new BankAccount(name, bal);
 			}

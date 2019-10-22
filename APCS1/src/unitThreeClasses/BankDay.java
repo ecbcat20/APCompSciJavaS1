@@ -5,6 +5,7 @@ public class BankDay {
 	String date = "October 20, 2019";
 	Banker banker;// instantiate
 	BankAccount[] account;
+	BankAccount returned;
 
 	public BankDay(String date, Banker b, BankAccount[] accounts) { // pass
 		this.date = date;
@@ -20,21 +21,19 @@ public class BankDay {
 		return date;
 	}
 
-	public BankAccount search(String s) {
-		;
-		
-		for(int i = 0; i<=20; i++) {
-			if(Banker.line.contains(s)) {
-				System.out.println("found");
-				BankAccount returned = (BankAccount) Banker.line;
-				return returned;
+	public BankAccount search(BankAccount s) {
+		for (int i = 0; i < 20; i++) {
+			if (s == account[i]) { //error line
+				System.out.println("found at: " + account[i]);
+				returned = account[i];
 			} else {
-				System.out.println("not found");
+			
 			}
+
 		}
-		
-		
+
 		return returned;
+
 	}
 
 	public void setBanker(Banker b) {
