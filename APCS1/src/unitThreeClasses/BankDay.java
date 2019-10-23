@@ -21,10 +21,7 @@ public class BankDay {
 		return date;
 	}
 
-<<<<<<< HEAD
-	public BankAccount[] search(String s) {
-		return Banker.accounts;
-=======
+
 	public BankAccount search(String s) {
 		for (int i = 0; i < 20; i++) {
 			if (account[i].getName().equals(s)) { // error line
@@ -36,7 +33,6 @@ public class BankDay {
 
 		return returned;
 
->>>>>>> branch 'master' of https://github.com/ecbcat20/APCompSciJavaS1
 	}
 
 	public void setBanker(Banker b) {
