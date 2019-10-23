@@ -41,5 +41,10 @@ public class BankDay {
 	public Banker getBanker() {
 		return banker;
 	}
+	
+	public String greet() {
+		return "hello my name is " + banker;
+		
+	}
 
 }

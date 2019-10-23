@@ -10,6 +10,7 @@ public class Launch {
 
 		// instantiate a banker
 		Banker b = new Banker("joe");
+		System.out.println(b.greeting());
 
 		// instantiate a bankday
 		BankDay date = new BankDay(x, b, Banker.read("F:\\CS\\Period6\\classes and objects\\bank_account_2013.txt"));
