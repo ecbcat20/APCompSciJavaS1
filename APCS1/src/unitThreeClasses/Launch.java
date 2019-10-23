@@ -21,7 +21,7 @@ public class Launch {
 		// instantiate a bankday
 		BankDay date = new BankDay(x, b, Banker.read("E:\\CS\\Period6\\classes and objects\\bank_account_2013.txt"));
 
-		// functional to this point :)
+		// search for 5 names
 		System.out.println(date.search(Ahmed));
 		System.out.println(date.search(Adrien));
 		System.out.println(date.search(Aidan));
