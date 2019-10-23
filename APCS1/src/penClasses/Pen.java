@@ -2,10 +2,16 @@ package penClasses;
 
 public class Pen {
 	
+	@SuppressWarnings("unused")
 	private String type;
+	
+	@SuppressWarnings("unused")
 	private int point;
+	
+	@SuppressWarnings("unused")
 	private String color;
-	private boolean isClicked = false;
+	
+	private boolean isClicked;
 	
 	public Pen() {
 		
@@ -13,7 +19,7 @@ public class Pen {
 	
 	public Pen(String type, int point, String color, boolean isClicked) {
 		this.type = type; this.color = color;
-		this.isClicked = isClicked;
+		this.isClicked = false;
 	}
 	
 	public void click() {
