@@ -18,8 +18,8 @@ public class BankDay {
 		return date;
 	}
 
-	public BankAccountBanker search(String s) {
-		return account;
+	public BankAccount[] search(String s) {
+		return Banker.accounts;
 	}
 
 	public void setBanker(Banker b) {

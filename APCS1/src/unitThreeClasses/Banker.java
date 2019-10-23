@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Banker {
 
 	public String name;
+	static BankAccount[] accounts = new BankAccount[20];
 
 	public Banker(String name) {
 		this.name = name;
@@ -14,17 +15,13 @@ public class Banker {
 	public static BankAccount[] read(String fileName) {
 		// accepts parameter String fileName (remember to escape characters)
 
-		BankAccount[] accounts = new BankAccount[20];
+		
 		System.out.println("Reading File from Java code");
 
 		try {
 
 			File file = new File(fileName); // instantiate file as new file with filename
 			Scanner in = new Scanner(file);
-
-			// Variable to hold the one line data
-			@SuppressWarnings("unused")
-			String line;
 
 			// Read file line by line and print on the console
 			for (int i = 0; i < 20; i++) {
