@@ -6,17 +6,15 @@ import java.util.Scanner;
 public class Banker {
 
 	public String name;
+	static BankAccount[] accounts = new BankAccount[20];
 
 	public Banker(String name) {
 		this.name = name;
 	}
 
-	static String line;
-
 	public static BankAccount[] read(String fileName) {
 		// accepts parameter String fileName (remember to escape characters)
 
-		BankAccount[] accounts = new BankAccount[20];
 		System.out.println("Reading File from Java code");
 
 		try {
