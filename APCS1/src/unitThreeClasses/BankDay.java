@@ -21,9 +21,9 @@ public class BankDay {
 		return date;
 	}
 
-	public BankAccount search(BankAccount s) {
+	public BankAccount search(String s) {
 		for (int i = 0; i < 20; i++) {
-			if (s == account[i]) { // error line
+			if (account[i].getName().equals(s)) { // error line
 				System.out.println("found at: " + Banker.accounts[i]);
 				returned = Banker.accounts[i];
 			}
