@@ -9,16 +9,16 @@ import javax.swing.JPanel;
 
 public class FrameCreator {
 
-	//create frame, panel, and calculator buttons
-	static JFrame calculator = new JFrame ("Simple Java Calculator");
+	// create frame, panel, and calculator buttons
+	static JFrame calculator = new JFrame("Simple Java Calculator");
 	static JPanel calcPanel = new JPanel();
 	static JButton plus = new JButton("+");
 	static JButton minus = new JButton("-");
 	static JButton times = new JButton("*");
 	static JButton dividedBy = new JButton("/");
-	
+
 	public static void createFrame() {
-		//create calculator frame
+		// create calculator frame
 		calculator.setSize(100, 400);
 		calcPanel.add(plus);
 		calcPanel.add(minus);
@@ -28,7 +28,7 @@ public class FrameCreator {
 		calcPanel.setVisible(true);
 		calculator.setVisible(true);
 	}
-	
+
 	public static void listenForOperation() {
 		FrameCreator.plus.addActionListener(new ActionListener() {
 
@@ -66,7 +66,7 @@ public class FrameCreator {
 
 		});
 	}
-	
+
 	public static void main(String[] args) {
 
 		createFrame();
