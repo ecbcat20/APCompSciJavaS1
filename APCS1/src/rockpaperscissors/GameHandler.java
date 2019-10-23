@@ -5,29 +5,21 @@ import java.util.Scanner;
 
 public class GameHandler {
 
-	//main variables
+	// main variables
 	static String userMove;
-	static String[] computerMove = {"R", "P", "S"};
+	static String[] computerMove = { "R", "P", "S" };
 
-	//random
+	// random
 	static int random = new Random().nextInt(3);
 
-	//scanner
+	// scanner
 	static Scanner scanner = new Scanner(System.in);
 
-
-
 	public static void main(String[] args) {
-		
-		//run main game class
+
+		// run main game class
 		ActionHandler.game();
-		
 
 	}
 
 }
-
-
-
-
-

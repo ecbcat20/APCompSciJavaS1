@@ -1,7 +1,5 @@
 package basics;
 
-import java.io.FileWriter;
-
 public class WhatAreComments {
 
 	String path = "~/Users/ecbca/Desktop/file.txt";

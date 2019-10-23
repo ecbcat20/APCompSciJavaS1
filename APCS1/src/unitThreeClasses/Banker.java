@@ -6,7 +6,11 @@ import java.util.Scanner;
 public class Banker {
 
 	public String name;
+<<<<<<< HEAD
 	static BankAccount[] accounts = new BankAccount[20];
+=======
+	static BankAccount[] accounts = new BankAccount[20]; // must be static because calling from static method main()
+>>>>>>> branch 'master' of https://github.com/ecbcat20/APCompSciJavaS1
 
 	public Banker(String name) {
 		this.name = name;
@@ -15,9 +19,14 @@ public class Banker {
 	public static BankAccount[] read(String fileName) {
 		// accepts parameter String fileName (remember to escape characters)
 
+<<<<<<< HEAD
 		
+=======
+		// initialize method
+>>>>>>> branch 'master' of https://github.com/ecbcat20/APCompSciJavaS1
 		System.out.println("Reading File from Java code");
 
+		// flow
 		try {
 
 			File file = new File(fileName); // instantiate file as new file with filename
@@ -27,6 +36,7 @@ public class Banker {
 			for (int i = 0; i < 20; i++) {
 				String name = in.next();
 				int bal = in.nextInt();
+				line = name + "      " + bal;
 				System.out.println(name + "     " + bal);
 				accounts[i] = new BankAccount(name, bal);
 			}

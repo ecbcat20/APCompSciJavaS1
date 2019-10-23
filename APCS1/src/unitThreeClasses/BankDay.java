@@ -4,9 +4,12 @@ public class BankDay {
 
 	String date = "October 20, 2019";
 	Banker banker;// instantiate
+	BankAccount[] account;
+	BankAccount returned;
 
-	public BankDay(String date, Banker b, String[] accounts) { // pass
+	public BankDay(String date, Banker b, BankAccount[] accounts) { // pass
 		this.date = date;
+		this.account = accounts;
 		this.banker = b; // declare
 	}
 
@@ -18,8 +21,22 @@ public class BankDay {
 		return date;
 	}
 
+<<<<<<< HEAD
 	public BankAccount[] search(String s) {
 		return Banker.accounts;
+=======
+	public BankAccount search(String s) {
+		for (int i = 0; i < 20; i++) {
+			if (account[i].getName().equals(s)) { // error line
+				System.out.println("found at: " + Banker.accounts[i]);
+				returned = Banker.accounts[i];
+			}
+
+		}
+
+		return returned;
+
+>>>>>>> branch 'master' of https://github.com/ecbcat20/APCompSciJavaS1
 	}
 
 	public void setBanker(Banker b) {
@@ -28,6 +45,11 @@ public class BankDay {
 
 	public Banker getBanker() {
 		return banker;
+	}
+	
+	public String greet() {
+		return "hello my name is " + banker;
+		
 	}
 
 }
