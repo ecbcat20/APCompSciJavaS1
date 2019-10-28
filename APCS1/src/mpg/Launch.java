@@ -11,7 +11,7 @@ public class Launch {
 		int o = scanner.nextInt();
 		Car auto = new Car(o);
 
-		System.out.println("Filling Station Visit: ");
+		System.out.print("Filling Station Visit: ");
 		int m, g;
 		System.out.println("odometer reading: ");
 		m = scanner.nextInt();

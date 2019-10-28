@@ -23,14 +23,13 @@ public class Car {
 	}
 
 	String fillUp(int odometerReading, double i) {
+		this.odometerReading = odometerReading;
 		gallons = i;
 		return gallons + " , " + odometerReading;
 	}
 
 	double calculateMPG() {
 		double MPG;
-		System.out.println(myStartMiles);
-		System.out.println(odometerReading);
 		myEndMiles = odometerReading - myStartMiles;
 		MPG = (myEndMiles / gallons);
 		return MPG;
