@@ -23,6 +23,7 @@ public class Banker {
 			File file = new File(fileName); // instantiate file as new file with filename
 			Scanner in = new Scanner(file);
 			
+			@SuppressWarnings("unused")
 			String line;
 
 			// Read file line by line and print on the console
