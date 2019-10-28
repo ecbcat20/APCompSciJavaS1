@@ -8,6 +8,10 @@ public class Car {
 	private double myGallonsUsed;
 
 	double gallons, odometerReading;
+	
+	public Car() {
+		
+	}
 
 	public Car(int myStartMiles) {
 		this.myStartMiles = myStartMiles;
