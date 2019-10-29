@@ -31,8 +31,12 @@ public class ParkingLot {
 		return vrooms;
 	}
 
-	double returnMPG(double mpg1, double mpg2, double mpg3) {
-		double MPG = ((mpg1 + mpg2 + mpg3) / 3);
+	double returnMPG() {
+		double MPG = 0;
+		for (int i = 0; i < parked.size(); i++) {
+			MPG += parked.get(i).calculateMPG();
+		}
+		MPG = MPG/parked.size();
 		return MPG;
 	}
 

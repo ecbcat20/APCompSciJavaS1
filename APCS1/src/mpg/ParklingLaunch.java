@@ -31,7 +31,7 @@ public class ParklingLaunch {
 		double mpg3 = car3.calculateMPG();
 
 		// find and print mpg of entire lot
-		System.out.println("Average of Lot: " + lot.returnMPG(mpg1, mpg2, mpg3));
+		System.out.println("Average of Lot: " + lot.returnMPG());
 
 		// print mpg of each car
 		System.out.println("car1: " + mpg1);
@@ -43,7 +43,7 @@ public class ParklingLaunch {
 		double mpg1new = car1.calculateMPG();
 
 		// find mpg after fill and print
-		System.out.println("Average of New Lot: " + lot.returnMPG(mpg1new, mpg2, mpg3));
+		System.out.println("Average of New Lot: " + lot.returnMPG());
 
 	}
 
