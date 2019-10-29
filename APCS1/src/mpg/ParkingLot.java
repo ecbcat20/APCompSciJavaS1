@@ -8,6 +8,7 @@ public class ParkingLot {
 	double avgMPG;
 
 	ArrayList<Car> parked = new ArrayList<Car>();
+	ArrayList<String> vrooms = new ArrayList<String>();
 
 	// default constructor
 	public ParkingLot() {
@@ -21,12 +22,13 @@ public class ParkingLot {
 
 	}
 
-	public void add(Car car) {
+	public void add(Car car, String alias) {
 		parked.add(car);
+		vrooms.add(alias);
 	}
 
-	ArrayList<Car> returnParked() {
-		return parked;
+	ArrayList<String> returnParked() {
+		return vrooms;
 	}
 
 	double returnMPG(double mpg1, double mpg2, double mpg3) {

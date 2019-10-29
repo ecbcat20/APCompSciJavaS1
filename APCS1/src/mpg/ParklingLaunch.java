@@ -13,10 +13,13 @@ public class ParklingLaunch {
 		Car car3 = new Car(20);
 
 		// add each car to lot
-		lot.add(car1);
-		lot.add(car2);
-		lot.add(car3);
+		lot.add(car1, "car1");
+		lot.add(car2, "car2");
+		lot.add(car3, "car3");
 
+		//print contents of lot
+		System.out.println(lot.returnParked());
+		
 		// fill up each car
 		car1.fillUp(300, 10);
 		car2.fillUp(400, 10);
