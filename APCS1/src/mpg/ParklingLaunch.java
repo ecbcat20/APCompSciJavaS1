@@ -17,9 +17,10 @@ public class ParklingLaunch {
 		lot.add(car2, "car2");
 		lot.add(car3, "car3");
 
-		//print contents of lot
+		// print contents of lot
+		System.out.println("Parking Lot Contains: ");
 		System.out.println(lot.returnParked());
-		
+
 		// fill up each car
 		car1.fillUp(300, 10);
 		car2.fillUp(400, 10);
@@ -31,19 +32,20 @@ public class ParklingLaunch {
 		double mpg3 = car3.calculateMPG();
 
 		// find and print mpg of entire lot
-		System.out.println("Average of Lot: " + lot.returnMPG());
+		System.out.println("\n" + "Average MPG of Lot: " + lot.returnMPG() + " MPG");
 
 		// print mpg of each car
+		System.out.println();
 		System.out.println("car1: " + mpg1);
 		System.out.println("car2: " + mpg2);
 		System.out.println("car3: " + mpg3);
 
 		// change fill value of car1
 		car1.fillUp(600, 10);
-		double mpg1new = car1.calculateMPG();
+		System.out.println("\n" + "New MPG of car1: " + car1.calculateMPG() + " MPG");
 
 		// find mpg after fill and print
-		System.out.println("Average of New Lot: " + lot.returnMPG());
+		System.out.println("Average MPG of New Lot: " + lot.returnMPG() + " MPG");
 
 	}
 
