@@ -1,6 +1,6 @@
 package mpg;
 
-public class ParklingLaunch {
+public class ParkingLaunch {
 
 	public static void main(String[] args) {
 
@@ -42,6 +42,8 @@ public class ParklingLaunch {
 
 		// change fill value of car1
 		car1.fillUp(600, 10);
+
+		// print new value of MPG of car 1
 		System.out.println("\n" + "New MPG of car1: " + car1.calculateMPG() + " MPG");
 
 		// find mpg after fill and print
