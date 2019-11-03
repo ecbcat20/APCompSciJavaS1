@@ -7,7 +7,7 @@ public class Launch {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("New car initalized at: ");
+		System.out.println("New car initialized at: ");
 		int o = scanner.nextInt();
 		Car auto = new Car(o);
 

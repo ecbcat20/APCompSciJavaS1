@@ -8,7 +8,7 @@ public class ParkingLot {
 	double avgMPG;
 
 	ArrayList<Car> parked = new ArrayList<Car>(); // parked cars
-	ArrayList<String> vrooms = new ArrayList<String>(); // aliases of parked cars
+	private ArrayList<String> vrooms = new ArrayList<String>(); // aliases of parked cars
 
 	// default constructor
 	public ParkingLot() {

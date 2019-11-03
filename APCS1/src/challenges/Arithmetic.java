@@ -1,14 +1,3 @@
-/**
- * 
- */
-
-/**
- * @author Evan Belsky
- * Date: September 5. 2019
- * Period: 6 AP CS
- *
- */
-
 package challenges;
 
 public class Arithmetic {

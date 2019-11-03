@@ -29,7 +29,7 @@ public class CoinTest {
 
 		// generate a random number between 1 and 10.
 		// flip bCoin that many times.
-		// each time outpt its state after flip.
+		// each time output its state after flip.
 
 		Random rand = new Random();
 		int min = 1, max = 10;
