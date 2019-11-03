@@ -2,9 +2,10 @@ package examReview;
 
 public class Trail {
     private int x, y;
-    private String string;
+    @SuppressWarnings("unused")
+	private String string;
 
-    @SuppressWarnings(unused)
+
     public Trail(String s) {
         x = 10;
         y = 10;
@@ -12,9 +13,10 @@ public class Trail {
         string = s;
     }
 
-    @SuppressWarnings(unused)
-    String met() {
-        int product = x*y;
+
+    @SuppressWarnings("deprecation")
+	String met() {
+        Integer product = new Integer(x*y);
         String k = product.toString();
         return k;
     }
