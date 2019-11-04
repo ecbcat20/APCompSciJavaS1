@@ -10,6 +10,11 @@ public class Main {
 		p.setPoint(7);
 		p.click();
 		
+		System.out.println(p.click());
+		System.out.println(p.click());
+		System.out.println(p.click());
+		System.out.println(p.click());
+		
 		
 		
 		System.out.println(p.toString());

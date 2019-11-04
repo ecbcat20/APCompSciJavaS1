@@ -17,9 +17,10 @@ public class Pen {
 		this.isClicked = false;
 	}
 
-	public void click() {
+	public boolean click() {
 
 		isClicked = !isClicked;
+		return isClicked;
 	}
 
 	public void setColor(String c) {
