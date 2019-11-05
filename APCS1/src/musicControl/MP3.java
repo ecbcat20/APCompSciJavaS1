@@ -11,21 +11,21 @@ public class MP3 {
     private String alias;
 
     public MP3() {
-      
+
     }
 
-    ArrayList<String> music = new ArrayList<String>();
+    ArrayList<String> music = new ArrayList<String>(); // create list
 
     public void addSong(String name) {
-        music.add(name);
+        music.add(name); // add to arraylist
     }
 
     public void removeSong(String name) {
-        music.remove(name);
+        music.remove(name); // remove from arraylist
     }
 
     ArrayList<String> returnList() {
-        return music;
+        return music; // return music in arraylist
     }
 
 }
