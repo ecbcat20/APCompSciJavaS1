@@ -12,7 +12,7 @@ public class Launch {
 
         songList1.removeSong("Beautiful People"); // remove song
 
-        System.out.println(songList1.returnList( )); // return contents of list
+        System.out.println(songList1.returnList()); // return contents of list
 
     }
 }
