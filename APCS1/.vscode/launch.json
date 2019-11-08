@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CreateGUI",
+            "request": "launch",
+            "mainClass": "simpleGUI.CreateGUI",
+            "projectName": "APCS1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Launch",
             "request": "launch",
             "mainClass": "stringReversal.Launch",
