@@ -15,6 +15,7 @@ public class Trail {
 
 
     String met() {
+        @SuppressWarnings("deprecation")
         Integer product = new Integer(x * y);
         String k = product.toString();
         return k;
