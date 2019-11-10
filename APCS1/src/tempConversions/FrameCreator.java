@@ -16,17 +16,38 @@ public class FrameCreator implements ActionListener {
     }
 
     JPanel panel = new JPanel();
-    JButton convert = new JButton("Convert");
-    public static JTextField entryField = new JTextField("Enter Value to Convert");
+
+    JButton convertFtoC = new JButton("F. --> C.");
+    JButton convertCtoF = new JButton("C. --> F.");
+
+    public static JTextField entryField = new JTextField("Conversion Value?");
 
     public void makeFrame() {
         JFrame frame = new JFrame(name);
-        frame.setSize(200, 100);
+        frame.setSize(200, 200);
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        panel.add(convert);
+        panel.add(convertFtoC);
+        panel.add(convertCtoF);
         panel.add(entryField);
 
-        convert.addActionListener(this);
+        convertFtoC.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Converter action = new Converter(Double.parseDouble(entryField.getText()));
+                action.FtoCconvert();
+            }
+        });
+
+        convertCtoF.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Converter action2 = new Converter(Double.parseDouble(entryField.getText()));
+                action2.CtoFConvert();
+            }
+        });
 
         frame.add(panel);
         frame.setVisible(true);
@@ -35,8 +56,7 @@ public class FrameCreator implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Converter action = new Converter(Double.parseDouble(entryField.getText()));
-        action.convert();
+
     }
 
 }

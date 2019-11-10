@@ -15,7 +15,7 @@ public class Trail {
 
 
     String met() {
-        Integer product = new Integer(x*y);
+        Integer product = new Integer(x * y);
         String k = product.toString();
         return k;
     }

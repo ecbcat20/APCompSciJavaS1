@@ -10,10 +10,17 @@ public class Converter {
         this.d = d;
     }
 
-    double convert() { // F to C only
+    double FtoCconvert() { // F to C only
         converted = ((d - 32) * 5 / 9);
         convertedString = String.valueOf(converted);
-        FrameCreator.entryField.setText((convertedString) + " Degrees Celsius");
+        FrameCreator.entryField.setText((convertedString) + "°C");
+        return converted;
+    }
+
+    double CtoFConvert() { // C to F only
+        converted = ((d * 9 / 5) + 32);
+        convertedString = String.valueOf(converted);
+        FrameCreator.entryField.setText((convertedString) + "°F");
         return converted;
     }
 
