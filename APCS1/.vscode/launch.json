@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ArrayReview",
+            "request": "launch",
+            "mainClass": "arrays.ArrayReview",
+            "projectName": "APCS1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TempConverter",
             "request": "launch",
             "mainClass": "tempConversions.TempConverter",
