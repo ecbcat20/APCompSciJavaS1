@@ -3,8 +3,9 @@ package statistics;
 public class Launcher {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		ReadCode reader = new ReadCode();
+		reader.readCode("filepath");
 	}
 
 }
