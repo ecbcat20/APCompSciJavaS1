@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadCode {
-	int myData[] = new int[1039];
+	static int myData[] = new int[1039]; // array that is being written to
 
 	public int[] readCode(String filePath) {
 
@@ -23,6 +23,7 @@ public class ReadCode {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+
 		return myData;
 
 	}
