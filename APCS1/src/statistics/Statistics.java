@@ -21,10 +21,10 @@ public class Statistics {
 	}
 
 	public static int getMinimum(int[] data) {
-		int localmin = 100;
+		int localmin = 1;
 
 		for (int i = 0; i < 1039; i++) {
-			if (data[i] < localmin) {
+			if (data[i] <= localmin) {
 				min = data[i];
 			}
 		}
@@ -33,7 +33,7 @@ public class Statistics {
 	}
 
 	public static int getMaximum(int[] data) {
-		int localMax = 0;
+		int localMax = 1;
 
 		for (int i = 0; i < 1039; i++) {
 			if (data[i] > localMax) {
@@ -63,14 +63,31 @@ public class Statistics {
 
 	public static int getMedian(int[] data) {
 		// use sorteddata as parameter for this
+		med = data[1039 / 2];
 		return med;
 	}
 
 	public static int getMode(int[] data) {
+		int freq[] = new int[1039];
+
+		for (int i = 0; i < data.length; i++) {
+			freq[data[i]]++;
+		}
+
+		int max = 0;
+		for (int i = 0; i < data.length; i++) {
+			if (freq[i] > max) {
+				max = data[i];
+			}
+		}
+
+		mod = max;
 		return mod;
 	}
 
 	public static double getStanDev(int[] data) {
+		
+		
 		return stanDev;
 	}
 
