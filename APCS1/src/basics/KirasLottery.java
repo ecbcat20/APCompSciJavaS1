@@ -9,7 +9,6 @@ public class KirasLottery {
 	static double lotto;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		for (int i = 0; i <= numberAmount; i++) {
 			lotto = Math.random();

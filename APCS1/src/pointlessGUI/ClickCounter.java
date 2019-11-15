@@ -20,15 +20,13 @@ public class ClickCounter implements ActionListener {
         panel.add(clickme);
         panel.add(label);
         panel.setVisible(true);
-    }
-
-    public void setCounter() {
-
+        frame.setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        num++;
+        label.setText("Button has been clicked " + num + " of Times")
     }
 
 }

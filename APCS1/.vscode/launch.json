@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - Launcher",
             "request": "launch",
+            "mainClass": "pointlessGUI.Launcher",
+            "projectName": "APCS1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Launcher",
+            "request": "launch",
             "mainClass": "statistics.Launcher",
             "projectName": "APCS1"
         },
