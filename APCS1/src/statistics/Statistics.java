@@ -8,7 +8,7 @@ public class Statistics {
 	static ReadCode reader = new ReadCode();
 
 	public static long calcSum(int[] data) {
-		for (int i = 0; i < 1039; i++) {
+		for (int i = 0; i < data.length; i++) {
 			sum += data[i];
 		}
 
@@ -16,14 +16,14 @@ public class Statistics {
 	}
 
 	public static double calcAverage(int[] data) {
-		avg = (sum / 1039);
+		avg = (sum / data.length);
 		return avg;
 	}
 
 	public static int getMinimum(int[] data) {
 		int localmin = 1;
 
-		for (int i = 0; i < 1039; i++) {
+		for (int i = 0; i < data.length; i++) {
 			if (data[i] <= localmin) {
 				min = data[i];
 			}
@@ -35,7 +35,7 @@ public class Statistics {
 	public static int getMaximum(int[] data) {
 		int localMax = 1;
 
-		for (int i = 0; i < 1039; i++) {
+		for (int i = 0; i < data.length; i++) {
 			if (data[i] > localMax) {
 				max = data[i];
 			}
@@ -62,19 +62,20 @@ public class Statistics {
 	}
 
 	public static int getMedian(int[] data) {
-		// use sorteddata as parameter for this
-		med = data[1039 / 2];
+		// use sorteddata as parameter for this (relies on having sorted data to
+		// function)
+		med = data[data.length / 2];
 		return med;
 	}
 
 	public static int getMode(int[] data) {
-		int freq[] = new int[1039];
+		int freq[] = new int[data.length]; // create a temp array with same dimensions as input array
 
-		for (int i = 0; i < data.length; i++) {
+		for (int i = 0; i < data.length; i++) { // populate temp array with frequency values from input array
 			freq[data[i]]++;
 		}
 
-		int max = 0;
+		int max = 0; // basic code to find max value in an array
 		for (int i = 0; i < data.length; i++) {
 			if (freq[i] > max) {
 				max = data[i];
@@ -86,8 +87,16 @@ public class Statistics {
 	}
 
 	public static double getStanDev(int[] data) {
-		
-		
+		double av = avg;
+		int sumdiffsq = 0;
+
+		for (int i = 0; i < data.length; i++) {
+			sumdiffsq += (Math.pow(data[i] - av, 2)); // standard deviation formula part 1
+		}
+
+		double val2 = (sumdiffsq / (data.length - 1)); // standard deviation formula part 2
+		stanDev = (long) Math.sqrt(val2);
+
 		return stanDev;
 	}
 

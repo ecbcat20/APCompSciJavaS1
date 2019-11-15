@@ -6,7 +6,7 @@ public class Launcher {
 		int[] data;
 
 		ReadCode reader = new ReadCode();
-		data = reader.readCode("G:\\CS\\numbers.txt");
+		data = reader.readCode("D:\\CS\\numbers.txt");
 
 		Statistics stat1 = new Statistics();
 		System.out.println("Sum of Data Set: " + stat1.calcSum(data));
@@ -17,6 +17,7 @@ public class Launcher {
 
 		System.out.println("Mode of Data: " + stat1.getMode(data));
 		System.out.println("Median of Data: " + stat1.getMedian(sorteddata));
+		System.out.println("Standard Deviation of Data " + stat1.getStanDev(sorteddata));
 
 	}
 
