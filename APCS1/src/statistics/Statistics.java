@@ -76,7 +76,7 @@ public class Statistics {
 		}
 
 		int max = 0; // basic code to find max value in an array
-		for (int i = 0; i < data.length; i++) {
+		for (int i : data) {
 			if (freq[i] > max) {
 				max = data[i];
 			}

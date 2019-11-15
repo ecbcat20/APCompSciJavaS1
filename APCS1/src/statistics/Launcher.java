@@ -6,7 +6,7 @@ public class Launcher {
 		int[] data;
 
 		ReadCode reader = new ReadCode();
-		data = reader.readCode("D:\\CS\\numbers.txt");
+		data = reader.readCode("G:\\CS\\numbers.txt");
 
 		Statistics stat1 = new Statistics();
 		System.out.println("Sum of Data Set: " + stat1.calcSum(data));
