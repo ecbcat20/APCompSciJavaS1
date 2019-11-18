@@ -3,22 +3,23 @@ package coinClasses;
 import java.util.ArrayList;
 
 public class Coin {
-	private boolean face;
-	private int flips = 0;
-	int heads, tails = 0;
+	private Boolean face;
+	public static int flips = 0;
+	static int heads;
+	static int tails = 0;
 
 	public static ArrayList<Coin> coins = new ArrayList<>();
 
 	public static ArrayList<Boolean> coinFaces = new ArrayList<>();
 
-	public Coin(boolean face, int flips) {
+	public Coin(Boolean face, int flips) {
 		this.face = face;
 		face = false;
 		this.flips = flips;
 		flips = 0;
 	}
 
-	boolean getFace() {
+	Boolean getFace() {
 		return face;
 	}
 
@@ -27,11 +28,13 @@ public class Coin {
 	}
 
 	void flip() {
-
+		
 		face = !face;
+
 		if (face) {
 			heads++;
-		} else {
+		}
+		if (!face) {
 			tails++;
 		}
 

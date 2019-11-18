@@ -26,7 +26,7 @@ public class ClickCounter implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         num++;
-        label.setText("Button has been clicked " + num + " of Times")
+        label.setText("Button has been clicked " + num + " of Times");
     }
 
 }
