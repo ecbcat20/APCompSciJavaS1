@@ -73,7 +73,7 @@ public class Statistics {
 
 		for (int i = 0; i < data.length; i++) { // populate temp array with frequency values from input array
 			freq[data[i]]++;
-		}
+		} 
 
 		int max = 0; // basic code to find max value in an array
 		for (int i : data) {
