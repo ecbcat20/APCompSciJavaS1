@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Coin {
 	private Boolean face;
-	public static int flips = 0;
+	public int flips = 0;
 	static int heads;
 	static int tails = 0;
 
@@ -28,7 +28,7 @@ public class Coin {
 	}
 
 	void flip() {
-		
+
 		face = !face;
 
 		if (face) {

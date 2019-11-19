@@ -3,33 +3,42 @@ package coinClasses;
 public class Launcher {
 
 	public static void randomflip(Coin[] myCoin) {
+		Coin.coinFaces.clear();
+		double rand;
+
 		for (int i = 0; i < myCoin.length; i++) {
-			double rand = Math.random() * 10;
-			if (rand < 4) {
+			rand = Math.random() * 10;
+			if (rand < 5) {
 				myCoin[i].flip();
-				Coin.flips++;
-				Coin.coinFaces.add(myCoin[i].getFace());
-				if ((myCoin[i].getFace()).toString() == "true") {
-					Coin.heads++;
-				} else if ((myCoin[i].getFace()).toString() == "false") {
-					Coin.tails++;
-				}
-			} else {
-				Coin.coinFaces.add(myCoin[i].getFace());
+			}
+
+		}
+
+	}
+
+	public static void displayFace(Coin[] myCoin) {
+		System.out.println("\n");
+		int z = 0;
+		for (int i = 0; i < Coin.coinFaces.size(); i++) {
+			if (z < 20) {
+				System.out.print(Coin.coinFaces.get(i) + ", ");
+				z++;
+			} else if (z >= 20) {
+				System.out.println();
+				z = 0;
 			}
 		}
 	}
 
-	public static void displayFace(Coin[] myCoin) {
-		System.out.println();
-		for (int i = 0; i < myCoin.length; i++) {
-			System.out.print(myCoin[i].getFace().toString() + ", ");
-		}
-	}
-
 	public static void displayFlips(Coin[] myCoin) {
+		int x = 0;
 		for (int i = 0; i < myCoin.length; i++) {
-
+			if(x < 20 ) {
+				System.out.print(myCoin[i].flips);
+			} else if (x>=20) {
+				System.out.println();
+				x = 0;
+			}
 		}
 	}
 
@@ -70,30 +79,34 @@ public class Launcher {
 			Coin.coinFaces.add(myCoin[i].getFace());
 		}
 
-		System.out.println(Coin.coinFaces);
+		displayFace(myCoin);
 
 		Coin.coinFaces.clear();
 
-		randomflip(myCoin);
-
-		System.out.println("\n" + Coin.coinFaces);
-		System.out.println("\n" + "Heads: " + countHeads(myCoin));
-		System.out.println("Flips: " + Coin.flips);
-
-		Coin.flips = 0;
-		allHeads(myCoin);
-		System.out.println(Coin.coinFaces);
-
-		System.out.println("\n" + "Heads: " + countHeads(myCoin));
-		System.out.println("\n" + "Flips: " + Coin.flips);
-
-		Coin.flips = 0;
-		randomflip(myCoin);
-		displayFace(myCoin);
 		System.out.println("\n");
+		randomflip(myCoin);
+		System.out.println("\n");
+		displayFace(myCoin);
+
+		System.out.println("\n" + "Heads: " + countHeads(myCoin));
+
+		allHeads(myCoin);
+		displayFace(myCoin);
+		displayFlips(myCoin);
+		System.out.println();
+
+		System.out.println("\n" + "Heads: " + countHeads(myCoin));
+
+		System.out.println();
+
+		randomflip(myCoin);
+
+		System.out.println();
+		displayFace(myCoin);
+
+		System.out.println();
 		System.out.println("Heads: " + countHeads(myCoin));
-		System.out.println("Flips: " + Coin.flips);
-		
+
 	}
 
 }
