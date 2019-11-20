@@ -1,22 +1,14 @@
 package coinClasses;
 
-import java.util.ArrayList;
-
 public class Coin {
 	private Boolean face;
-	public int flips = 0;
-	static int heads;
+	public int flips;
+	static int heads = 0;
 	static int tails = 0;
-
-	public static ArrayList<Coin> coins = new ArrayList<>();
-
-	public static ArrayList<Boolean> coinFaces = new ArrayList<>();
 
 	public Coin(Boolean face, int flips) {
 		this.face = face;
-		face = false;
 		this.flips = flips;
-		flips = 0;
 	}
 
 	Boolean getFace() {
@@ -28,17 +20,7 @@ public class Coin {
 	}
 
 	void flip() {
-
-		face = !face;
-
-		if (face) {
-			heads++;
-		}
-		if (!face) {
-			tails++;
-		}
-
 		flips++;
+		face = !face;
 	}
-
 }
