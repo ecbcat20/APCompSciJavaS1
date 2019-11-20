@@ -5,10 +5,10 @@ public class Launcher {
 	public static void randomflip(Coin[] myCoin) {
 		double rand;
 
-		for (int i = 0; i < myCoin.length; i++) {
+		for (Coin c : myCoin) {
 			rand = Math.random() * 11;
 			if (rand <= 4) {
-				myCoin[i].flip();
+				c.flip();
 			}
 		}
 	}
@@ -16,9 +16,9 @@ public class Launcher {
 	public static void displayFace(Coin[] myCoin) {
 		System.out.println("\n");
 		int z = 0;
-		for (int i = 0; i < myCoin.length; i++) {
+		for (Coin c : myCoin) {
 			if (z < 20) {
-				System.out.print(myCoin[i].getFace().toString() + ", ");
+				System.out.print(c.getFace().toString() + ", ");
 				z++;
 			} else if (z >= 20) {
 				System.out.println();
