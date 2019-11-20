@@ -3,12 +3,11 @@ package coinClasses;
 public class Launcher {
 
 	public static void randomflip(Coin[] myCoin) {
-		Coin.coinFaces.clear();
 		double rand;
 
 		for (int i = 0; i < myCoin.length; i++) {
 			rand = Math.random() * 10;
-			if (rand < 5) {
+			if (rand <= 7) {
 				myCoin[i].flip();
 			}
 
@@ -34,7 +33,7 @@ public class Launcher {
 		int x = 0;
 		for (int i = 0; i < myCoin.length; i++) {
 			if(x < 20 ) {
-				System.out.print(myCoin[i].flips);
+				System.out.print(myCoin[i].getFlips());
 			} else if (x>=20) {
 				System.out.println();
 				x = 0;
@@ -81,10 +80,9 @@ public class Launcher {
 
 		displayFace(myCoin);
 
-		Coin.coinFaces.clear();
-
 		System.out.println("\n");
 		randomflip(myCoin);
+
 		System.out.println("\n");
 		displayFace(myCoin);
 
