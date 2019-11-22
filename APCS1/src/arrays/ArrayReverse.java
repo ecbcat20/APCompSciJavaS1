@@ -5,31 +5,45 @@ import java.util.Random;
 public class ArrayReverse {
 
 	static int arr[] = new int[10];
+	static String s = "";
+	static String y = "";
+	static String l = "";
 
 	public static void wrongReverse(int[] arr) {
 		System.out.println("\n");
+
 		int[] b = new int[arr.length];
-		for (int i = arr.length - 1; i > 0; i--) {
+		for (int i = arr.length - 1; i >= 0; i--) {
 			b[i] = arr[i];
-			System.out.print(b[i] + " ");
+			s += b[i] + " ";
 		}
 	}
 
 	public static void rightReverse(int[] arr) {
 		System.out.println("\n");
-		int[] tmp = new int[10];
-		for (int i = 1; i < arr.length; i++) {
-			int z = arr[arr.length - i];
+		int[] tmp = new int[arr.length];
+		for (int i = 0; i <= arr.length - 1; i++) {
+			int z = arr[arr.length - i - 1];
 			tmp[i] = z;
-			System.out.print(tmp[i] + " ");
+			y += tmp[i] + " ";
 		}
 	}
 
 	public static void goodReverse(int[] arr) {
 		System.out.println("\n");
-		for (int i = 1; i < arr.length; i++) {
-			int z = arr[arr.length - i];
-			System.out.print(z + " ");
+		for (int i = 0; i <= arr.length - 1; i++) {
+			int z = arr[arr.length - i - 1];
+			l += z + " ";
+		}
+	}
+
+	public static void display(int[] arr) {
+		if() {
+			System.out.println(s);
+		} else if() {
+			System.out.println(y);
+		} else if() {
+			System.out.println(l);
 		}
 	}
 
@@ -49,10 +63,9 @@ public class ArrayReverse {
 			System.out.print(arr[i] + " ");
 		}
 
-		wrongReverse(arr);
-		rightReverse(arr);
-		goodReverse(arr);
-
+		wrongReverse();
+		rightReverse();
+		goodReverse();
 	}
 
 }
