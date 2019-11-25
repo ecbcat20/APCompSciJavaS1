@@ -1,43 +1,29 @@
 package kickboxing;
 
 public class Kickboxer {
-    private String wclass = "";
-    
 
-    public Kickboxer() {
+    static String[] wc = { "Fly Weight", "Super Fly Weight", "Bantam Weight", "Super Bantam Weight", "Feather Weight",
+            "Super Feather Weight", "Light Weight", "Super Feather Weight", "Light Weight", "Super Light Weight",
+            "Welter Weight", "Super Welter Weight", "Middle Weight", "Super Middle Weight", "Light Heavy Weight",
+            "Super Light Heavy Weight", "Cruiser Weight", "Super Cruiser Weight", "Heavy Weight",
+            "Super Heavy Weight" };
+
+    static int[] limits = { 0, 112, 115, 118, 122, 126, 130, 135, 140, 147, 154, 160, 167, 174, 183, 189, 198, 209 };
+
+    static int w = (int) (Math.random() * 98 + 112);
+
+    public static void main(String[] args) {
+        System.out.println(w);
+        System.out.println(qualifyWeight(wc, limits, w));
     }
 
-    // weight class             from to(not inclusive)
-    // -----------------------------------------------
-    // Fly Weight               0 112
-    // Super Fly Weight         112 115
-    // Bantam Weight            115 118
-    // Super Bantam Weight      118 122
-    // Feather Weight           122 126
-    // Super Feather Weight     126 130
-    // Light Weight             130 135
-    // Super Light Weight       135 140
-    // Welter Weight            140 147
-    // Super Welter Weight      147 154
-    // Middle Weight            154 160
-    // Super Middle Weight      160 167
-    // Light Heavy Weight       167 174
-    // Super Light Heavy Weight 174 183
-    // Cruiser Weight           183 189
-    // Super Cruiser Weight     189 198
-    // Heavy Weight             198 209
-    // Super Heavy Weight       209
-
-    String qualifyWeight(String[] wc, int[] limits, int weight) {
-
-        for(int i : limits) {
-            
+    public static String qualifyWeight(String[] wc, int[] limits, int weight) {
+        for (int i = 1; i < limits.length; i++) {
+            if (weight < limits[i]) {
+                return wc[i - 1];
+            }
         }
 
-        if(weight <limits[1]) {
-            wclass = wc[1];
-        }
-
-        return wclass;
+        return null;
     }
 }
