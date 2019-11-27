@@ -5,17 +5,10 @@ public class Launcher {
 	public static void randomflip(Coin[] myCoin) {
 		double rand;
 
-<<<<<<< HEAD
 		for (int i = 0; i < myCoin.length; i++) {
 			rand = Math.random() * 10;
 			if (rand <= 7) {
 				myCoin[i].flip();
-=======
-		for (Coin c : myCoin) {
-			rand = Math.random() * 11;
-			if (rand <= 4) {
-				c.flip();
->>>>>>> c7c972ea94659c5d1a843e30cda698e160f94eac
 			}
 		}
 	}
@@ -38,16 +31,9 @@ public class Launcher {
 		int x = 0;
 		System.out.println();
 		for (int i = 0; i < myCoin.length; i++) {
-<<<<<<< HEAD
-			if(x < 20 ) {
-				System.out.print(myCoin[i].getFlips());
-			} else if (x>=20) {
-=======
 			if (x < 20) {
-				System.out.print(myCoin[i].getFlips() + ", ");
-				x++;
+				System.out.print(myCoin[i].getFlips());
 			} else if (x >= 20) {
->>>>>>> c7c972ea94659c5d1a843e30cda698e160f94eac
 				System.out.println();
 				x = 0;
 			}
@@ -71,7 +57,6 @@ public class Launcher {
 		for (int i = 0; i < myCoin.length; i++) {
 			if (myCoin[i].getFace() == false) {
 				myCoin[i].flip();
-				myCoin[i].flips++;
 			}
 		}
 	}
@@ -84,15 +69,6 @@ public class Launcher {
 			myCoin[i] = new Coin(false, 0);
 		}
 
-<<<<<<< HEAD
-		displayFace(myCoin);
-
-		System.out.println("\n");
-		randomflip(myCoin);
-
-		System.out.println("\n");
-		displayFace(myCoin);
-=======
 		displayFace(myCoin); // display falses 1
 
 		System.out.println(); // reset line
@@ -103,7 +79,6 @@ public class Launcher {
 		System.out.println(); // reset line
 		System.out.println("Displaying Faces from Random Flip 1");
 		displayFace(myCoin); // 2
->>>>>>> c7c972ea94659c5d1a843e30cda698e160f94eac
 
 		System.out.println("\n" + "Heads: " + countHeads(myCoin));
 
