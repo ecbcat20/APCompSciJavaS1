@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ArrayTest",
+            "request": "launch",
+            "mainClass": "arrays.ArrayTest",
+            "projectName": "APCS1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Launcher",
             "request": "launch",
             "mainClass": "kickboxing.Launcher",
