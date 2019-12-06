@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ArrayListStart",
+            "request": "launch",
+            "mainClass": "arrayList.ArrayListStart",
+            "projectName": "APCS1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ArrayTest",
             "request": "launch",
             "mainClass": "arrays.ArrayTest",
