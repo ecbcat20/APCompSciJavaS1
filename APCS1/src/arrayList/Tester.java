@@ -13,6 +13,7 @@ public class Tester {
 		String name = "";
 		double amount = 0;
 		double max = 0;
+		String n = "";
 
 		while (1 == 1) {
 
@@ -28,16 +29,24 @@ public class Tester {
 
 				BankAccountArrList account = new BankAccountArrList(name, amount);
 				accounts.add(account);
+
 			} else if (name.equalsIgnoreCase("exit")) {
+
 				for (BankAccountArrList a : accounts) {
-					if (a.balance >= max) {
+					if (a.balance > max) {
 						max = a.balance;
 					}
-					System.out.println(a.name);
-					System.exit(10);
 				}
-			}
 
+				for (BankAccountArrList b : accounts) {
+					if (b.balance == max) {
+						n = b.name;
+					}
+				}
+				
+				System.out.println(n);
+				System.exit(10);
+			}
 		}
 
 	}
