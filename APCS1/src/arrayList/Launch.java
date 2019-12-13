@@ -15,18 +15,18 @@ public class Launch {
 		studentz.add(jane);
 		studentz.add(janet);
 		studentz.add(jasmin);
-		
+
 		System.out.println(studentz);
 
 		ClassRoster roster = new ClassRoster(studentz);
 		System.out.println(roster.addStudent("jessie", 1017));
 		System.out.println(roster.removeStudent("jane"));
-		
+
 		System.out.println(studentz);
-		
-		roster.removeStudent(1011);
+
+		roster.removeStudent(studentz, 1011);
 		roster.retrieveByID(1011);
-		
+
 		roster.retrieveByName("jessie");
 	}
 
