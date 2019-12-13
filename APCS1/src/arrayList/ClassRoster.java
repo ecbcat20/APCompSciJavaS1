@@ -28,6 +28,16 @@ public class ClassRoster {
 		return contain;
 	}
 
+	boolean containsStudent(int id) {
+		boolean contain = false;
+		for (Student s : students) {
+			if (s.id == id) {
+				contain = true;
+			}
+		}
+		return contain;
+	}
+
 	String retrieveByID(int id) {
 		String nm = "";
 		for (Student s : students) {
@@ -50,15 +60,9 @@ public class ClassRoster {
 	}
 
 	boolean addStudent(String studentName, int studentID) {
-		boolean contains = false;
 		boolean added = false;
-		for (Student s : students) {
-			if (s.name == studentName) {
-				contains = true;
-			}
-		}
 
-		if (contains == false && students.size() <= MAX_NUM) {
+		if (containsStudent(studentName) == false && students.size() <= MAX_NUM) {
 			students.add(new Student(studentName, studentID));
 			added = true;
 		}
@@ -66,17 +70,18 @@ public class ClassRoster {
 		return added;
 	}
 
-	boolean removeStudent(int id) {
-		boolean contains = false;
+	boolean removeStudent(ArrayList<Student> s, int id) {
+		int loc = 10000;
 		boolean removed = false;
-		for (Student s : students) {
-			if (s.id == id) {
-				contains = true;
-				if (contains == true) {
-					students.remove(s);
-					removed = true;
-				}
+		for (int i = 0; i < s.size(); i++) {
+			if (s.get(i).id == id) {
+				loc = i;
 			}
+		}
+
+		if (containsStudent(id)) {
+			s.remove(s.get(loc));
+			removed = true;
 		}
 
 		return removed;
