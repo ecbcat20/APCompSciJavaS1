@@ -70,14 +70,20 @@ public class FriendGroup {
 		} else {
 			return false;
 		}
-		
+
 		return x;
 	}
-	
+
 	public void improveFriend(String first) {
-		if(improvable(first)) {
-			
+		Friend s = null;
+		for (Friend f : friends) {
+			if (f.firstName.equalsIgnoreCase(first))
+				;
+			s = f;
+		}
+
+		if (s.level < s.MAX_LEVEL) {
+			s.improveFS();
 		}
 	}
-
 }
