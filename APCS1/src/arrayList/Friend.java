@@ -2,9 +2,9 @@ package arrayList;
 
 public class Friend {
 
-	private String firstName;
-	private String lastName;
-	private int level;
+	String firstName;
+	String lastName;
+	int level;
 	final int MAX_LEVEL;
 
 	public Friend(String firstName, String lastName, int level) {
