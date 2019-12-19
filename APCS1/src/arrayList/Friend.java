@@ -4,7 +4,7 @@ public class Friend {
 
 	String firstName;
 	String lastName;
-	int level;
+	private int level;
 	final int MAX_LEVEL;
 
 	public Friend(String firstName, String lastName, int level) {
@@ -21,6 +21,14 @@ public class Friend {
 
 	public void improveFS() {
 		level++;
+	}
+
+	public void setLevel(int l) {
+		level = l;
+	}
+
+	public int getLevel() {
+		return level;
 	}
 
 }

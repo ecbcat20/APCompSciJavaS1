@@ -30,7 +30,7 @@ public class FriendGroup {
 	public ArrayList<Friend> listFriend(int level) {
 		ArrayList<Friend> returned = new ArrayList<>();
 		for (Friend f : friends) {
-			if (f.level == level) {
+			if (f.getLevel() == level) {
 				returned.add(f);
 			}
 		}
@@ -43,14 +43,14 @@ public class FriendGroup {
 	}
 
 	public void removeFriend(Friend aFriend) {
-		if (friends.contains(aFriend)) {
+		if (findFriend(aFriend.firstName) != null) {
 			friends.remove(aFriend);
 		}
 	}
 
 	public void removeAll(int level) {
 		for (Friend f : friends) {
-			if (f.level == level) {
+			if (f.getLevel() == level) {
 				friends.remove(f);
 			}
 		}
@@ -65,7 +65,7 @@ public class FriendGroup {
 			s = f;
 		}
 
-		if (s.level < s.MAX_LEVEL) {
+		if (s.getLevel() < s.MAX_LEVEL) {
 			x = true;
 		} else {
 			return false;
@@ -82,7 +82,7 @@ public class FriendGroup {
 			s = f;
 		}
 
-		if (s.level < s.MAX_LEVEL) {
+		if (s.getLevel() < s.MAX_LEVEL) {
 			s.improveFS();
 		}
 	}
