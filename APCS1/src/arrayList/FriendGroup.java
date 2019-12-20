@@ -66,8 +66,6 @@ public class FriendGroup {
 
 		if (s.getLevel() < s.MAX_LEVEL) {
 			x = true;
-		} else {
-			return false;
 		}
 
 		return x;
