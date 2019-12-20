@@ -11,7 +11,6 @@ public class FriendGroup {
 	}
 
 	public void displayFriends() {
-		Friend s = null;
 		for (Friend f : friends) {
 			System.out.print(f + ", ");
 		}
@@ -42,6 +41,10 @@ public class FriendGroup {
 		friends.add(aFriend);
 	}
 
+	public void addFriend(String first, int level) {
+		friends.add(new Friend(first, null, level));
+	}
+
 	public void removeFriend(Friend aFriend) {
 		if (findFriend(aFriend.firstName) != null) {
 			friends.remove(aFriend);
@@ -59,11 +62,7 @@ public class FriendGroup {
 	public boolean improvable(String first) {
 		Friend s = null;
 		boolean x = false;
-		for (Friend f : friends) {
-			if (f.firstName.equalsIgnoreCase(first))
-				;
-			s = f;
-		}
+		s = findFriend(first);
 
 		if (s.getLevel() < s.MAX_LEVEL) {
 			x = true;
@@ -76,11 +75,7 @@ public class FriendGroup {
 
 	public void improveFriend(String first) {
 		Friend s = null;
-		for (Friend f : friends) {
-			if (f.firstName.equalsIgnoreCase(first))
-				;
-			s = f;
-		}
+		s = findFriend(first);
 
 		if (s.getLevel() < s.MAX_LEVEL) {
 			s.improveFS();
