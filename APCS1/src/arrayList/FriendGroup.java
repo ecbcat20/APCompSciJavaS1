@@ -10,6 +10,10 @@ public class FriendGroup {
 		friends = list;
 	}
 
+	public FriendGroup() {
+
+	}
+
 	public void displayFriends() {
 		for (Friend f : friends) {
 			System.out.print(f + ", ");
@@ -41,8 +45,8 @@ public class FriendGroup {
 		friends.add(aFriend);
 	}
 
-	public void addFriend(String first, int level) {
-		friends.add(new Friend(first, null, level));
+	public void addFriend(String first, String last, int level) {
+		friends.add(new Friend(first, last, level));
 	}
 
 	public void removeFriend(Friend aFriend) {
