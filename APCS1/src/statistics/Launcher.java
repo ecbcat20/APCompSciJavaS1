@@ -8,16 +8,15 @@ public class Launcher {
 		ReadCode reader = new ReadCode();
 		data = reader.readCode("G:\\CS\\numbers.txt");
 
-		Statistics stat1 = new Statistics();
-		System.out.println("Sum of Data Set: " + stat1.calcSum(data));
-		System.out.println("Average of Data Set: " + stat1.calcAverage(data));
-		System.out.println("Minimum of Data Set: " + stat1.getMinimum(data));
+		System.out.println("Sum of Data Set: " + Statistics.calcSum(data));
+		System.out.println("Average of Data Set: " + Statistics.calcAverage(data));
+		System.out.println("Minimum of Data Set: " + Statistics.getMinimum(data));
 
-		int[] sorteddata = stat1.sortList(data);
+		int[] sorteddata = Statistics.sortList(data);
 
-		System.out.println("Mode of Data: " + stat1.getMode(data));
-		System.out.println("Median of Data: " + stat1.getMedian(sorteddata));
-		System.out.println("Standard Deviation of Data " + stat1.getStanDev(sorteddata));
+		System.out.println("Mode of Data: " + Statistics.getMode(data));
+		System.out.println("Median of Data: " + Statistics.getMedian(sorteddata));
+		System.out.println("Standard Deviation of Data " + Statistics.getStanDev(sorteddata));
 
 	}
 

@@ -15,7 +15,7 @@ public class Tester {
 		double max = 0;
 		String n = "";
 
-		while (1 == 1) {
+		while (true) {
 
 			System.out.println("Hello, Please enter the name of the account");
 			name = scanner.next();
@@ -43,12 +43,12 @@ public class Tester {
 						n = b.name;
 					}
 				}
-				
+
 				System.out.println(n);
+				scanner.close();
 				System.exit(10);
 			}
 		}
-
 	}
 
 }
