@@ -15,17 +15,17 @@ public class FriendTester {
 		homies.addFriend(new Friend("Carrie", "Roberts", 1));
 
 		homies.displayFriends();
-//		homies.listFriend(2);
-//		System.out.println(homies.improveFriend(“Terry”);
-//		homies.displayFriends();
-//		System.out.println(homies.improveFriend(“Carrie”);
-//		homies.listFriend(2);
-//		homies.removeFriend(“Mary”);
-//		homies.listFriend(4);
-//		System.out.println(homies.improveFriend(“Terry”);
+		homies.listFriend(2);
+		homies.improveFriend("Terry");
+		homies.displayFriends();
+		homies.improveFriend("Terry");
+		homies.listFriend(2);
+		homies.removeFriend("Mary");
+		homies.listFriend(4);
+		homies.improveFriend("Terry");
 		homies.removeAll(3);
-//		homies.displayFriends();
-//		System.out.println(findFriend(“Tam”);
+		homies.displayFriends();
+		System.out.println(homies.findFriend("Tam"));
 	}
 
 }

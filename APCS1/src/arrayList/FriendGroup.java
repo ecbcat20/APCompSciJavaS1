@@ -55,10 +55,16 @@ public class FriendGroup {
 		}
 	}
 
+	public void removeFriend(String first) {
+		if (findFriend(first) != null) {
+			friends.remove(findFriend(first));
+		}
+	}
+
 	public void removeAll(int level) {
-		for (Friend f : friends) {
-			if (f.getLevel() == level) {
-				friends.remove(f);
+		for (int i = 0; i < friends.size(); i++) {
+			if (friends.get(i).getLevel() == level) {
+				friends.remove(friends.get(i));
 			}
 		}
 	}
