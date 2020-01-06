@@ -18,14 +18,14 @@ public class ClassRoster {
 	}
 
 	boolean containsStudent(String name) {
-		boolean contain = false;
+		boolean contains = false;
 		for (Student s : students) {
 			if (s.name == name) {
-				contain = true;
+				contains = true;
 			}
 		}
 
-		return contain;
+		return contains;
 	}
 
 	boolean containsStudent(int id) {
@@ -79,7 +79,7 @@ public class ClassRoster {
 			}
 		}
 
-		if (containsStudent(id)) {
+		if (containsStudent(id)) { // containsstudent by id
 			s.remove(s.get(loc));
 			removed = true;
 		}

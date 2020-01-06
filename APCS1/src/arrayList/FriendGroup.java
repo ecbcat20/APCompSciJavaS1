@@ -21,24 +21,23 @@ public class FriendGroup {
 	}
 
 	public Friend findFriend(String first) { // returns Friend s
-		Friend s = null;
+		Friend returnedFriend = null;
 		for (Friend f : friends) {
 			if (f.firstName.equalsIgnoreCase(first)) {
-				s = f;
+				returnedFriend = f;
 			}
 		}
-		return s;
+		return returnedFriend;
 	}
 
 	public ArrayList<Friend> listFriend(int level) {
-		ArrayList<Friend> returned = new ArrayList<>();
+		ArrayList<Friend> returnedFriends = new ArrayList<>();
 		for (Friend f : friends) {
 			if (f.getLevel() == level) {
-				returned.add(f);
+				returnedFriends.add(f);
 			}
 		}
-
-		return returned;
+		return returnedFriends;
 	}
 
 	public void addFriend(Friend aFriend) {
@@ -63,22 +62,24 @@ public class FriendGroup {
 
 	public void removeAll(int level) {
 		for (int i = 0; i < friends.size(); i++) {
-			if (friends.get(i).getLevel() == level) {
+			int friendLevel = friends.get(i).getLevel();
+
+			if (friendLevel == level) {
 				friends.remove(friends.get(i));
 			}
 		}
 	}
 
 	public boolean improvable(String first) {
-		Friend s = null;
-		boolean x = false;
-		s = findFriend(first);
+		Friend returnedFriend = null;
+		boolean isImprovable = false;
+		returnedFriend = findFriend(first);
 
-		if (s.getLevel() < s.MAX_LEVEL) {
-			x = true;
+		if (returnedFriend.getLevel() < returnedFriend.MAX_LEVEL) {
+			isImprovable = true;
 		}
 
-		return x;
+		return isImprovable;
 	}
 
 	public void improveFriend(String first) {
