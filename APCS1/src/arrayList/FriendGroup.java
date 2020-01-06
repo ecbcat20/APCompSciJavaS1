@@ -16,11 +16,11 @@ public class FriendGroup {
 
 	public void displayFriends() {
 		for (Friend f : friends) {
-			System.out.print(f + ", ");
+			System.out.print("\n" + f + ", ");
 		}
 	}
 
-	public Friend findFriend(String first) {
+	public Friend findFriend(String first) { // returns Friend s
 		Friend s = null;
 		for (Friend f : friends) {
 			if (f.firstName.equalsIgnoreCase(first)) {

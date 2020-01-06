@@ -17,7 +17,9 @@ public class FriendTester {
 
 		// display, then list all in level 2
 		homies.displayFriends();
-		homies.listFriend(2);
+		homies.listFriend(2); // should list Tam Roberts
+
+		System.out.println("\n");
 
 		// improve Terry to next level, then display friends
 		homies.improveFriend("Terry");
