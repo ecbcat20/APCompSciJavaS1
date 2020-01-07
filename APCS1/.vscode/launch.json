@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ArrayLisTestFile",
+            "request": "launch",
+            "mainClass": "arrayList.ArrayLisTestFile",
+            "projectName": "APCS1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - FriendTester",
             "request": "launch",
             "mainClass": "arrayList.FriendTester",
