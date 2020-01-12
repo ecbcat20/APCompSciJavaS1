@@ -1,6 +1,6 @@
 package searchingAndSorting;
 
-public class SearchTest2 {
+public class WangLinearSearch {
 
 	public static void main(String[] args) {
 		double[] toSearch = new double[100];

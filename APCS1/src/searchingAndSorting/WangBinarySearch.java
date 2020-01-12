@@ -1,6 +1,6 @@
 package searchingAndSorting;
 
-public class SearchTest {
+public class WangBinarySearch {
 
 	// source represents array of doubles, key represents number to find
 
