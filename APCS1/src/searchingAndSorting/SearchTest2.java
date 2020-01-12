@@ -1,3 +1,4 @@
+package searchingAndSorting;
 
 public class SearchTest2 {
 
